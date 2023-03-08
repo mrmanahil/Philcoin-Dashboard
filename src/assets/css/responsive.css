@@ -1,0 +1,1585 @@
+
+@media (max-width: 1800px) {
+    .navigation ul li a {
+        font-size: 14px;
+    }
+    
+    .navigation ul li {
+        padding: 21px 0;
+    }
+    
+    section.dashboard-main-sec {
+        padding: 0 70px;
+    }
+    
+    .philbox h2 {
+        font-size: 23px;
+    }
+    
+    .philbox p {
+        font-size: 13px;
+    }
+    
+    .philbox img {
+        max-width: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .philbox {
+        min-height: 240px;
+    }
+    
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 30.0544px;
+    }
+    
+    .pmd-boximg h3 {
+        font-size: 68.9434px;
+    }
+    
+    .philmd-box .pmd-boxcontent h3 {
+        font-size: 15px;
+        margin-top: 25px;
+    }
+    
+    .pmd-boximg img {
+        max-width: 150px;
+    }
+    
+    .philmd-box {
+        min-height: 205px;
+        padding: 25px;
+    }
+    
+    .row.philmd-boxrow {
+        margin-top: 25px;
+    }
+    
+    .biggraph {
+        margin-top: 25px;
+        padding: 25px;
+    }
+    
+    .charts-top > h2 {
+        font-size: 18px;
+    }
+    
+    .chart-month > span {
+        padding: 6px 9px;
+    }
+    
+    .chart-month > span img {
+        max-width: 18px;
+    }
+    
+    .chart-month form select {
+        font-size: 14px;
+        padding: 7px 17px;
+        margin-left: 5px;
+    }
+    
+    h2.transaction-head {
+        font-size: 18.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .trans-right img {
+        max-width: 80px;
+    }
+    
+    .transactions {
+        padding: 40px 15px 160px;
+    }
+    
+    div#chartContainer {
+        height: 260px !important;
+    }
+
+    /* ayub css  */
+    .cm-filters .usm-search-form input {
+        font-size: 14px;
+    }
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 20px;
+    }
+    .cm-filters .usm-search-form .form-group {
+        padding-right: 10px;
+    }
+    .prim-btn {
+        font-size: 14px;
+        padding: 6px 50px;
+    }
+    .ums-table thead th {
+        font-size: 16px;
+    }
+    
+    .user-info .img-box {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 14px;
+    }
+    .rights-btns button {
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    .status-btns button {
+        width: 25px;
+        height: 25px;
+    }
+    /* ayub css  */
+      
+}
+@media (max-width: 1599px) {
+    aside.sidebar {
+        width: 270px;
+    }
+    
+    .navigation {
+        padding-top: 30px;
+    }
+    
+    .navigation ul li a {
+        font-size: 12px;
+        padding: 0 25px;
+    }
+    
+    .navigation ul li a span img {
+        max-width: 15px;
+        max-height: 16px;
+    }
+    
+    .navigation ul li a span {
+        width: 30px;
+    }
+    
+    .navigation ul li a:before {
+        width: 3px;
+    }
+    
+    .brand {
+        padding-left: 25px;
+        min-height: 65px;
+    }
+    
+    .terms p {
+        font-size: 10px;
+        bottom: 20px;
+    }
+    
+    .arrow-side {
+        padding: 2px 9px;
+    }
+    
+    .arrow-side i {
+        font-size: 13px;
+    }
+    
+    .logo img {
+        max-width: 100px;
+    }
+    aside.sidebar.sidebarsm .logosm {
+        max-width: 20px;
+    }
+    .top-profile {
+        padding: 10px 0;
+        min-height: 65px;
+    }
+    
+    .bell-notification img {
+        max-width: 15px;
+        margin-right: 15px;
+    }
+    
+    .userimg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .userinfo h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .userinfo h3 {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    
+    section.main-dashboard-sec:before {
+        top: 65px;
+        width: calc(100% - 270px);
+    }
+    
+    section.dashboard-main-sec {
+        margin-left: 270px;
+        width: calc(100% - 270px);
+        padding: 0 60px;
+    }
+    
+    .philbox img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .philbox h2 {
+        font-size: 20px;
+    }
+    
+    .philbox p {
+        font-size: 11px;
+    }
+    
+    .philbox {
+        min-height: 200px;
+    }
+    
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 25.0544px;
+    }
+    
+    .pmd-boximg h3 {
+        font-size: 59.9434px;
+    }
+    
+    .philmd-box .pmd-boxcontent h3 {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+    
+    .pmd-boximg img {
+        max-width: 130px;
+    }
+    
+    .philmd-box {
+        min-height: 175px;
+        padding: 20px;
+    }
+    
+    .biggraph {
+        padding: 20px;
+    }
+    
+    .charts-top > h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .chart-month > span {
+        padding: 4px 8px;
+    }
+    
+    .chart-month > span img {
+        max-width: 15px;
+    }
+    
+    .chart-month form select {
+        font-size: 12px;
+        padding: 7px 15px;
+    }
+    
+    div#chartContainer {
+        height: 240px !important;
+    }
+    
+    .transactions {
+        padding: 40px 10px 140px;
+    }
+    
+    h2.transaction-head {
+        font-size: 15.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .trans-price {
+        margin-bottom: 30px;
+    }
+    
+    .trans-right img {
+        max-width: 70px;
+    }
+    
+    .graphi img {
+        max-width: 90%;
+    }
+
+    /* ayub css  */
+    .cm-filters .usm-search-form input {
+        font-size: 13px;
+        padding: 0;
+        height: 100%;
+    }
+    
+    .cm-filters .usm-search-form {
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .cm-filters .usm-search-form .form-group {
+        height: 100%;
+        padding-right: 15px;
+        width: 330px;
+    }
+    
+    .cm-filters .usm-search-form .form-group button {
+        width: auto;
+        height: 100%;
+    }
+    
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 75%;
+    }
+    .cm-filters button {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .cm-filters button img {
+        max-width: 33%;
+    }
+    
+    .prim-btn {
+        font-size: 13px;
+        padding: 6px 40px;
+    }
+    .usm-wraper .cm-filters {
+        margin-left: 210px;
+    }
+    .usm-wraper .cm-filters {
+        margin-left: 210px;
+    }
+    
+    .ums-table thead th {
+        font-size: 14px;
+    }
+    
+    .user-info .img-box {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 12px;
+    }
+    .ums-table tbody td:first-child {
+        width: 220px;
+    }
+    
+    .rights-btns button {
+        font-size: 12px;
+        padding: 6px 30px;
+        border-radius: 4px;
+        max-width: 120px;
+    }
+    
+    .ums-table tbody tr:first-child td {
+        padding-top: 20px;
+    }
+    .user-info {
+        gap: 20px;
+    }
+    /* ayub css  */
+    
+    
+}
+
+@media (max-width: 1400px) {
+    aside.sidebar {
+        width: 230px;
+    }
+    
+    .brand {
+        min-height: 55px;
+    }
+    
+    .logo img {
+        max-width: 90px;
+    }
+    
+    .arrow-side i {
+        font-size: 11px;
+    }
+    
+    .arrow-side {
+        padding: 0px 8px;
+        right: -13px;
+    }
+    
+    .navigation {
+        padding-top: 30px;
+    }
+    
+    .navigation ul li {
+        padding: 14px 0;
+    }
+    
+    .navigation ul li a {
+        font-size: 11px;
+    }
+    
+    .navigation ul li {
+        padding: 14px 0;
+    }
+    
+    .navigation ul li a span img {
+        max-width: 13px;
+        max-height: 14px;
+    }
+    
+    .terms p {
+        font-size: 9px;
+        bottom: 10px;
+    }
+    
+    section.dashboard-main-sec {
+        margin-left: 230px;
+        width: calc(100% - 230px);
+        padding: 0 50px;
+    }
+    
+    section.main-dashboard-sec:before {
+        width: calc(100% - 230px);
+        top: 55px;
+    }
+    
+    .bell-notification img {
+        max-width: 14px;
+        margin-right: 12px;
+    }
+    
+    .userimg {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .userinfo h2 {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    
+    .userinfo h3 {
+        font-size: 10px;
+    }
+    
+    .top-profile {
+        padding: 5px 0;
+        min-height: 55px;
+    }
+    
+    .inner-main {
+        padding-top: 30px;
+    }
+    
+    .philbox img {
+        max-width: 50px;
+    }
+    
+    .philbox h2 {
+        font-size: 15px;
+    }
+    
+    .philbox p {
+        font-size: 9px;
+    }
+    
+    .philbox {
+        min-height: 160px;
+    }
+    
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 20.0544px;
+        max-width: 130px;
+    }
+    
+    .pmd-boximg h3 {
+        font-size: 51.9434px;
+    }
+    
+    .philmd-box .pmd-boxcontent h3 {
+        font-size: 11px;
+        margin-top: 15px;
+    }
+    
+    .pmd-boximg img {
+        max-width: 110px;
+    }
+    
+    .philmd-box {
+        min-height: 155px;
+        padding: 15px;
+    }
+    
+    .charts-top > h2 {
+        font-size: 13px;
+    }
+    
+    .chart-month > span img {
+        max-width: 12px;
+    }
+    
+    .chart-month > span {
+        padding: 1px 7px;
+    }
+    
+    .chart-month form select {
+        font-size: 9px;
+        padding: 6px 12px;
+    }
+    
+    .biggraph {
+        padding: 15px;
+    }
+    
+    div#chartContainer {
+        height: 190px !important;
+    }
+    
+    .transactions {
+        padding: 35px 10px 120px;
+    }
+    
+    h2.transaction-head {
+        font-size: 12.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+    
+    .trans-price h3 {
+        font-size: 10px;
+    }
+    
+    .trans-right img {
+        max-width: 60px;
+    }
+    
+    .trans-price {
+        margin-bottom: 25px;
+    }
+
+    /* ayub css  */
+    .cm-filters .usm-search-form input {
+        font-size: 11px;
+    }
+    
+    .cm-filters .usm-search-form {
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 60%;
+    }
+    
+    .cm-filters .usm-search-form .form-group {
+        width: 290px;
+    }
+    
+    .cm-filters button {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .cm-filters button img {
+        max-width: 30%;
+    }
+    
+    .usm-wraper .cm-filters {
+        gap: 20px;
+    }
+    
+    .prim-btn {
+        font-size: 11px;
+        padding: 5px 30px;
+        border-radius: 4px;
+    }
+    .ums-table thead th {
+        font-size: 12px;
+    }
+    
+    .user-info .img-box {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 11px;
+    }
+    
+    .ums-table tbody td:first-child {
+        width: 170px;
+    }
+    
+    .rights-btns button {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        max-width: 150px;
+    }
+    
+    .rights-btns {
+        gap: 15px;
+    }
+    
+    .status-btns button {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .status-btns button img {
+        max-width: 45%;
+    }
+    .ums-table tbody td {
+        padding: 10px 0;
+    }
+    .rights-btns button {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        max-width: 90px;
+    }
+    /* ayub css  */
+    
+}
+
+@media (max-width: 1260px) {
+    aside.sidebar {
+        width: 200px;
+    }
+    
+    .brand {
+        min-height: 45px;
+    }
+    
+    .logo img {
+        max-width: 80px;
+    }
+    
+    .arrow-side i {
+        font-size: 9px;
+    }
+    
+    .arrow-side {
+        padding: 0;
+    }
+    .arrow-side span {
+        display: flex;
+        align-items: center;
+        padding: 6px 7px;
+    }
+    
+    .navigation {
+        padding-top: 25px;
+    }
+    
+    .navigation ul li {
+        padding: 12px 0;
+    }
+    
+    .navigation ul li a {
+        font-size: 10px;
+    }
+    
+    .navigation ul li a span img {
+        max-width: 11px;
+        max-height: 12px;
+    }
+    
+    .terms p {
+        font-size: 8px;
+    }
+    
+    section.dashboard-main-sec {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 0 30px;
+    }
+    
+    section.main-dashboard-sec:before {
+        width: calc(100% - 200px);
+        top: 45px;
+    }
+    
+    .bell-notification img {
+        max-width: 12px;
+        margin-right: 10px;
+    }
+    
+    .userimg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .userinfo h2 {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    
+    .userinfo h3 {
+        font-size: 9px;
+    }
+    
+    .top-profile {
+        padding: 4px 0;
+        min-height: 45px;
+    }
+    
+    .inner-main {
+        padding-top: 25px;
+    }
+    
+    .philbox img {
+        max-width: 40px;
+    }
+    
+    .philbox h2 {
+        font-size: 13px;
+    }
+    
+    .philbox p {
+        font-size: 8px;
+    }
+    
+    .philbox {
+        min-height: 130px;
+    }
+    
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 18.0544px;
+        max-width: 110px;
+    }
+    
+    .pmd-boximg h3 {
+        font-size: 48.9434px;
+    }
+    
+    .philmd-box .pmd-boxcontent h3 {
+        font-size: 10px;
+        margin-top: 13px;
+    }
+    
+    .pmd-boximg img {
+        max-width: 100px;
+    }
+    
+    .philmd-box {
+        min-height: 130px;
+        padding: 13px;
+    }
+    
+    .charts-top > h2 {
+        font-size: 12px;
+    }
+    
+    .chart-month > span img {
+        max-width: 10px;
+    }
+    
+    .chart-month > span {
+        padding: 0px 5px;
+    }
+    
+    .chart-month form select {
+        font-size: 8px;
+        padding: 5px 10px;
+    }
+    
+    .biggraph {
+        padding: 12px;
+    }
+    
+    div#chartContainer {
+        height: 170px !important;
+    }
+    
+    .transactions {
+        padding: 30px 8px 100px;
+    }
+    
+    h2.transaction-head {
+        font-size: 11.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 9px;
+        margin-bottom: 6px;
+    }
+    
+    .trans-price h3 {
+        font-size: 9px;
+    }
+    
+    .trans-right img {
+        max-width: 50px;
+    }
+    
+    .trans-price {
+        margin-bottom: 23px;
+    }
+    .profile {
+        margin-left: 10px;
+    }
+    aside.sidebar.sidebarsm .logosm {
+        max-width: 15px;
+    }
+    
+    aside.sidebar.sidebarsm {
+        width: 60px;
+    }
+    
+    section.dashboard-main-sec.dashboard-main-big {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+    section.main-dashboard-sec.main-dashboard-secbig:before {
+    width: calc(100% - 60px);
+}
+
+/* ayub css  */
+.prim-btn {
+    font-size: 9px;
+    padding: 4px 20px;
+}
+
+.cm-filters .usm-search-form input {
+    font-size: 9px;
+}
+
+.cm-filters .usm-search-form {
+    height: 34px;
+    border-radius: 6px;
+}
+
+.cm-filters .usm-search-form .form-group button img {
+    max-width: 45%;
+}
+
+.cm-filters .usm-search-form .form-group {
+    padding-right: 10px;
+}
+
+.cm-filters button {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+}
+
+.ums-table-main {
+    padding-top: 25px;
+}
+.usm-sec-main {
+    padding: 0 24px;
+    padding-top: 20px;
+}
+.ums-table thead th {
+    font-size: 10px;
+}
+
+.user-info .img-box {
+    width: 28px;
+    height: 28px;
+}
+
+.ums-table tbody td p {
+    font-size: 9px;
+}
+
+.ums-table tbody td:first-child {
+    width: 130px;
+}
+
+.user-info {
+    gap: 12px;
+}
+
+.rights-btns button {
+    font-size: 9px;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.rights-btns {
+    gap: 8px;
+}
+
+.status-btns button {
+    width: 15px;
+    height: 15px;
+}
+
+.status-btns {
+    gap: 8px;
+}
+
+.ums-table tbody td {
+    padding: 8px 0;
+}
+/* ayub css  */
+    
+}
+
+@media (max-width: 991px) {
+    /* signup page  */
+    .signup-box {
+        padding: 50px 40px;
+        max-width: 550px;
+    }
+    
+    .signup-box h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .signup-box p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .loginsocial a img {
+        width: auto;
+        height: auto;
+    }
+    
+    form.signup-form label {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    form.signup-form input {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border-width: 1px;
+    }
+    
+    form.signup-form .form-group {
+        margin-bottom: 20px;
+    }
+    
+    form.signup-form .row [class*=col-] {
+        padding: 0 8px;
+    }
+    
+    .signup-box .sb-texttwo {
+        margin-bottom: 0;
+    }
+    
+    .signup-box p.sb-textone {
+        margin-bottom: 20px;
+    }
+    
+    .loginsocial {
+        margin-bottom: 20px;
+    }
+    .agree {
+        margin-bottom: 20px;
+    }
+    .loginsocial a {
+        margin-right: 20px;
+    }
+    /* signup page  */
+
+    /* dashboard main page  */
+    section.dashboard-main-sec.dashboard-main-big, section.dashboard-main-sec {
+        width: 100%;
+        margin: 0;
+        padding-left: 90px;
+    }
+    
+    aside.sidebar {
+        background: #202022;
+        width: 280px;
+    }
+    
+    .brand {
+        min-height: 65px;
+    }
+    
+    .logo img {
+        max-width: 110px;
+    }
+    
+    .arrow-side i {
+        font-size: 14px;
+    }
+    
+    .arrow-side span {
+        padding: 8px 11px;
+    }
+    
+    .navigation ul li a {
+        font-size: 15px;
+    }
+    
+    .navigation ul li {
+        padding: 17px 0;
+    }
+    
+    .navigation ul li a span img {
+        max-width: 18px;
+        max-height: 23px;
+    }
+    
+    .navigation ul li a span {
+        width: 35px;
+    }
+    
+    .terms p {
+        font-size: 12px;
+    }
+    
+    aside.sidebar.sidebarsm {
+        width: 80px;
+    }
+    
+    aside.sidebar.sidebarsm .logosm {
+        max-width: 23px;
+    }
+    
+    .arrow-side {
+        right: -16px;
+    }
+    
+    section.main-dashboard-sec:before {
+        top: 65px;
+    }
+    
+    .top-profile {
+        min-height: 65px;
+    }
+    
+    .bell-notification img {
+        max-width: 19px;
+        margin-right: 13px;
+    }
+    
+    .userimg {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .userinfo h2 {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    
+    .userinfo h3 {
+        font-size: 13px;
+    }
+    .philbox {
+        margin-bottom: 25px;
+            min-height: 170px;
+    }
+    
+    .inner-main {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    
+    .row.philmd-boxrow {
+        margin-top: 0;
+    }
+    
+    .charts-top > h2 {
+        font-size: 16px;
+    }
+    
+    .chart-month > span img {
+        max-width: 18px;
+    }
+    
+    .chart-month > span {
+        padding: 3px 8px;
+    }
+    
+    .chart-month form select {
+        font-size: 12px;
+        padding: 5px 14px;
+    }
+    
+    .biggraph {
+        padding: 22px;
+        margin-bottom: 30px;
+    }
+    
+    div#chartContainer {
+        height: 250px !important;
+    }
+    .philbox img {
+        max-width: 50px;
+        max-width: 50px;
+    }
+    
+    .philbox h2 {
+        font-size: 18px;
+    }
+    
+    .philbox p {
+        font-size: 12px;
+    }
+    
+    .philmd-box {
+        min-height: 160px;
+    }
+    .transactions {
+        margin: 0 10px;
+        padding: 30px 8px 230px;
+    }
+    
+    h2.transaction-head {
+        font-size: 15.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .trans-price h3 {
+        font-size: 14px;
+    }
+    
+    .graphi img {
+        max-width: 47%;
+    }
+    
+    .trans-right img {
+        display: none;
+    }
+    
+    /* dashboard main page  */
+
+
+    /* ayub css  */
+     /* Sign In Page */
+     .forgottPass a {
+        font-size: 15px;
+    }
+    
+    form.signup-form .agree input {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* sign in page End */
+
+    /* Success Page */
+    .success-box img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .success-box .back-btn {
+        font-size: 15px;
+        padding: 6px 20px;
+        border-radius: 4px;
+    }    
+
+    /* End */
+
+    /* Lock Screen Page */
+    .lock-box img {
+        max-width: 75px;
+        height: 75px;
+        margin-bottom: 15px;
+    }
+    form.locks-form input {
+        padding: 8px 18px;
+    }
+    
+    form.locks-form .btn-login {
+        font-size: 14px;
+        padding: 6px 60px;
+        border-radius: 5px;
+    }
+    
+
+    /* End */
+
+    /* Reset pass page */
+    form.reset-form input {
+        padding: 8px 20px;
+    }
+    
+    .reset-form .btn-reset {
+        font-size: 15px;
+        padding: 4px 60px;
+        border-radius: 4px;
+    }
+    
+
+    /* End */
+
+    .cm-filters .usm-search-form input {
+        font-size: 12px;
+        }
+    
+        .prim-btn {
+            font-size: 12px;
+        }
+    
+        .ums-table thead th {
+            font-size: 12px;
+        }
+    
+        .ums-table tbody td p {
+            font-size: 11px;
+        }
+    
+        .rights-btns button {
+            font-size: 9px;
+            max-width: 60px;
+        }
+        .modal-box {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+    
+        .modal-box .modal-header-text h2 {
+            font-size: 22px;
+        }
+    
+        .modal-box .modal-content {
+            padding: 30px 30px 40px;
+        }
+    
+        .add-userBtn {
+            font-size: 12px;
+            padding: 6px 40px;
+            border-radius: 4px;
+        }
+    /* ayub css  */
+    
+}
+@media (max-width: 767px) {
+    /* signup page  */
+    .signup-box {
+        padding: 40px 30px;
+        max-width: 450px;
+    }
+    
+    .signup-box p {
+        font-size: 13px;
+    }
+    
+    form.signup-form label {
+        font-size: 13px;
+        margin-bottom: 7px;
+    }
+    
+    form.signup-form input {
+        padding: 7px;
+    }
+    
+    form.signup-form .form-group {
+        margin-bottom: 15px;
+    }
+    /* signup page  */
+
+    /* dashboard main page  */
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 23.0544px;
+    }
+    
+    .philmd-box {
+        margin-bottom: 25px;
+    }
+    
+    .biggraph {
+        margin-top: 0;
+    }
+    
+    .trans-price h2 {
+        font-size: 12px;
+    }
+    
+    .transactions {
+        padding: 30px 8px 170px;
+    }
+    /* dashboard main page  */
+
+    /* ayub css  */
+    .forgottPass {
+        padding: 0 10px;
+    }
+    .forgottPass a {
+        font-size: 13px;
+    }    
+
+    /* Success Page */
+    .success-box .back-btn {
+        margin-top: 0px;
+        font-size: 13px;
+        padding: 6px 22px;
+    }    
+
+    /* End */
+
+    table#ums-table {
+        overflow-x: scroll;
+        width: 870px;
+        }
+    
+        .ums-table-main {
+            overflow-x: scroll;
+        }
+    
+        .usm-wraper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .usm-wraper .cm-filters {
+            max-width: 100%;
+            justify-content: center;
+            margin: 0;
+        }
+    
+        .add-user-btn .add-btn.prim-btn {
+            width: 100%;
+        }
+    
+        .add-user-btn {
+            margin-top: 10px;
+        }
+    
+        .cm-filters .usm-search-form .form-group {
+            width: 353px;
+        }
+    /* ayub css  */
+    
+}
+
+@media (max-width: 575px) {
+    /* signup page  */
+    .signup-box {
+        max-width: 90%;
+        padding: 25px 15px;
+    }
+    
+    .signup-box h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .signup-box p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    form.signup-form .form-group {
+        margin-bottom: 7px;
+    }
+    
+    form.signup-form input {
+        padding: 5px 8px;
+    }
+    
+    form.signup-form label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    form.signup-form .agree label {
+        margin-left: 10px;
+    }
+    
+    .signup-box p.sb-textone {
+        margin-bottom: 15px;
+    }
+    
+    .loginsocial a {
+        margin-right: 10px;
+    }
+    
+    .loginsocial {
+        margin-bottom: 15px;
+    }
+    
+    section.signup-page {
+        padding: 50px 0;
+    }
+    /* signup page  */
+     /* dashboard main page  */
+
+    aside.sidebar.sidebarsm {
+        width: 60px;
+    }
+    
+    aside.sidebar.sidebarsm .navigation ul li a {
+        padding: 0 12px;
+    }
+    aside.sidebar.sidebarsm .logosm {
+        max-width: 19px;
+    }
+    
+    .arrow-side {
+        right: -25px;
+    }
+    section.dashboard-main-sec.dashboard-main-big, section.dashboard-main-sec {
+        padding: 0 20px;
+        padding-left: 80px;
+    }
+    
+    .dashboard-main-sec [class*=col-] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .top-profile {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 20px 0 20px;
+    }
+    
+    section.main-dashboard-sec.main-dashboard-secbig:before {
+        height: 0;
+    }
+    
+    .userimg {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .userinfo h2 {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+    
+    .inner-main {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .philbox h2 {
+        font-size: 15px;
+    }
+    
+    .philbox {
+        margin-bottom: 15px;
+    }
+    
+    .philmd-box .pmd-boxcontent h2 {
+        font-size: 17.0544px;
+    }
+    
+    .pmd-boximg h3 {
+        font-size: 41.9434px;
+    }
+    
+    .pmd-boximg img {
+        max-width: 80px;
+    }
+    
+    .philmd-box {
+        margin-bottom: 15px;
+        min-height: 140px;
+    }
+    
+    .charts-top {
+        justify-content: center;
+    }
+    
+    .chart-month {
+        justify-content: center;
+    }
+    
+    .charts-top > h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .chart-month > span img {
+        max-width: 15px;
+    }
+    
+    .chart-month > span {
+        padding: 2px 6px;
+    }
+    
+    .chart-month form select {
+        font-size: 11px;
+        margin: 0;
+    }
+    
+    .biggraph {
+        padding: 22px 16px;
+        margin-bottom: 15px;
+    }
+    
+    .transactions {
+        margin: 0;
+        padding: 30px 15px 80px;
+    }
+    
+    h2.transaction-head {
+        font-size: 13.7929px;
+    }
+    
+    .trans-price h2 {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+    
+    .trans-price h3 {
+        font-size: 12px;
+    }
+    .bell-notification {
+        margin-top: 10px;
+    }
+    
+    .bell-notification img {
+        max-width: 17px;
+    }    
+     /* dashboard main page  */
+
+     /* ayub css  */
+     .forgottPass a {
+        font-size: 12px;
+    }
+    
+    /* Lock Screen Page */
+    .lock-box img {
+        max-width: 65px;
+        height: 65px;
+    }
+    form.locks-form .btn-login {
+        font-size: 13px;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+
+    /* End */
+
+    /* Reset passs page */
+    .reset-form .btn-reset {
+        font-size: 13px;
+        padding: 4px 50px;
+        border-radius: 4px;
+        margin-top: 20px;
+    }    
+    /* End */
+    .cm-filters .usm-search-form .form-group {
+        width: 150px;
+    }
+     /* ayub css  */
+}

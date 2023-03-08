@@ -1,52 +1,42 @@
 import React from "react";
 
-// ** MUI
-import FormControl from "@mui/material/FormControl";
-import TextField, { BaseTextFieldProps } from "@mui/material/TextField";
-import FormHelperText from "@mui/material/FormHelperText";
-
-// ** form handling lib
-import { useController, UseControllerProps } from "react-hook-form";
-
-const Field = ({ control, ...props }) => {
-  const {
-    field: { onChange, onBlur, name, value, ref },
-    fieldState: { invalid, isTouched, isDirty, error },
-    formState: { touchedFields, dirtyFields },
-  } = useController({
-    ...props,
-    control,
-  });
-
+const Input = ({
+  type,
+  label,
+  placeholder,
+  register,
+  maxLength,
+  errors,
+  defaultValue,
+  minLength,
+  id,
+  className,
+}) => {
   return (
-    <FormControl fullWidth>
-      <TextField
-        {...props}
-        onChange={onChange}
-        onBlur={onBlur}
-        value={value}
-        name={name}
-        inputRef={ref}
-        label={props.label}
-        placeholder={props.placeholder}
-        error={Boolean(error)}
-        aria-describedby={`validation-schema-${name}`}
-        multiline={props.type === "text-area" ? true : false}
-        fullWidth
-
-        // rows={props.rows}
-        // InputProps={props.InputProps}
+    <>
+      <input
+        type={type}
+        id={id}
+        className={className}
+        placeholder={placeholder}
+        {...register(label, {
+          required: true,
+          minLength: minLength ? minLength : null,
+          maxLength: maxLength ? maxLength : null,
+        })}
+        defaultValue={defaultValue ? defaultValue : null}
       />
-      {error && (
-        <FormHelperText
-          sx={{ color: "error.main" }}
-          id={`validation-schema-${name}`}
-        >
-          {error.message}
-        </FormHelperText>
+
+      {errors === "required" && (
+        <span style={{ color: "red" }}>This Field Is Required</span>
       )}
-    </FormControl>
+      {errors === "maxLength" && (
+        <p style={{ color: "red" }}>
+          {placeholder} cannot exceed {maxLength} characters
+        </p>
+      )}
+    </>
   );
 };
 
-export default Field;
+export default Input;

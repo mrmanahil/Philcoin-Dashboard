@@ -62,17 +62,19 @@ const AuthProvider = ({ children }) => {
   // ** States
   const [user, setUser] = useState(defaultProvider.user);
   const [userTmp, setUserTmp] = useState(defaultProvider.user);
-  const [accessTokenTmp, setAccessTokenTmp] = (useState < string) | (null > "");
+  // const [accessTokenTmp, setAccessTokenTmp] = (useState < string) | (null > "");
+  const [accessTokenTmp, setAccessTokenTmp] = useState("");
 
-  const [loading, setLoading] = useState < boolean > defaultProvider.loading;
-  const [status, setStatus] = useState < AuthValuesType["status"] > "idle";
-  const [isInitialized, setIsInitialized] =
-    useState < boolean > defaultProvider.isInitialized;
-  const [activeStep, setActiveStep] =
-    useState < number > defaultProvider.activeStep; // signup step form
+  const [loading, setLoading] = useState(defaultProvider.loading);
+  // const [status, setStatus] = useState < AuthValuesType["status"] > "idle";
+  const [status, setStatus] = useState("idle");
+  const [isInitialized, setIsInitialized] = useState(
+    defaultProvider.isInitialized
+  );
+  const [activeStep, setActiveStep] = useState(defaultProvider.activeStep); // signup step form
 
   // ** Hooks
-  const router = useRouter();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const initAuth = async () => {
@@ -147,35 +149,16 @@ const AuthProvider = ({ children }) => {
     authService
       .login(params)
       .then(async ({ data: response }) => {
-        // console.log('==========Login data================')
-        // console.log(response)
-        // console.log('====================================')
+        console.log("==========Login data================");
+        console.log(response);
+        console.log("====================================");
 
         saveLogin({
           accessToken: response.data.tokens.accessToken || "",
           refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
-        router.push("/channels");
-        setStatus("success");
-      })
-      .catch((error) => {
-        setStatus("error");
-        if (errorCallback) errorCallback(error.response?.data);
-      });
-  };
-
-  const handleSwitchChannel = async (params, errorCallback) => {
-    setStatus("pending");
-    authService
-      .channelSwitch(params)
-      .then(async ({ data: response }) => {
-        saveLogin({
-          accessToken: response.data.tokens.accessToken || "",
-          refreshToken: response.data.tokens.refreshToken || "",
-          user: response.data.user,
-        });
-        router.push(`/channels/${response.data.user.activeChannel.channel.id}`);
+        navigate("/dashboard");
         setStatus("success");
       })
       .catch((error) => {
@@ -190,7 +173,7 @@ const AuthProvider = ({ children }) => {
     window.localStorage.removeItem("userData");
     window.localStorage.removeItem(authConfig.storageTokenKeyName);
     window.localStorage.removeItem(authConfig.refreshTokenKeyName);
-    router.push("/login");
+    navigate("/login");
   };
 
   const handleRegister = (params, errorCallback) => {
@@ -203,7 +186,7 @@ const AuthProvider = ({ children }) => {
           refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
-        router.push("/channels");
+        navigate("/channels");
         setStatus("success");
       })
       .catch((error) => {
@@ -227,7 +210,7 @@ const AuthProvider = ({ children }) => {
         data.data.tokens.accessToken
       );
 
-      router.push("/channels");
+      // navigate("/channels");
       setStatus("success");
       handleNext();
     } catch (error) {
@@ -241,9 +224,9 @@ const AuthProvider = ({ children }) => {
     delete body.API_ERROR;
     setStatus("pending");
     try {
-      const { data } = await CompanyServices.add(body, {
-        Authorization: `Bearer ${accessTokenTmp}`,
-      });
+      // const { data } = await CompanyServices.add(body, {
+      //   Authorization: `Bearer ${accessTokenTmp}`,
+      // });
       // console.log('====================================')
       // console.log(accessTokenTmp)
       // console.log(data.data.company)
@@ -286,7 +269,7 @@ const AuthProvider = ({ children }) => {
     window.localStorage.setItem(authConfig.storageTokenKeyName, accessToken);
     window.localStorage.setItem(authConfig.refreshTokenKeyName, refreshToken);
 
-    const returnUrl = router.query.returnUrl;
+    // const returnUrl = router.query.returnUrl;
 
     // console.log('=========returnUrl===========================')
     // console.log(returnUrl)
@@ -295,11 +278,11 @@ const AuthProvider = ({ children }) => {
     setUser(user);
     window.localStorage.setItem("userData", JSON.stringify(user));
 
-    const redirectURL =
-      returnUrl && returnUrl !== "/" ? returnUrl : router.asPath;
+    // const redirectURL =
+    //   returnUrl && returnUrl !== "/" ? returnUrl : router.asPath;
 
-    // router.replace(redirectURL as string)
-    router.replace(redirectURL);
+    // // router.replace(redirectURL as string)
+    // router.replace(redirectURL);
   };
 
   const values = {
@@ -312,7 +295,7 @@ const AuthProvider = ({ children }) => {
     isInitialized,
     setIsInitialized,
     login: handleLogin,
-    handleSwitchChannel,
+    // handleSwitchChannel,
     logout: handleLogout,
     register: handleRegister,
     createAccount: handleCreateAccount,

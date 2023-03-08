@@ -1,0 +1,787 @@
+/* ayub css */
+
+form.signin-form {
+    margin-top: 1.5vw;
+}
+form.signin-form input {
+    padding: 0.5vw 0.727vw;
+}
+.forgottPass {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .75vw;
+}
+
+.forgottPass a {
+    text-decoration: none;
+    color: #F89509;
+    font-size: .8vw;
+}
+
+
+/* End */
+
+
+/* Success Page */
+.success-box img {
+    max-width: 3.5vw;
+}
+
+.success-box h1 {
+    color: #fff;
+    margin-top: 1vw;
+}
+
+
+.success-box .back-btn {
+    font-size: 0.82vw;
+    text-decoration: none;
+    background: #F89509;
+    color: #202022;
+    padding: .4vw 1.8vw;
+    border: .1vw solid transparent;
+    border-radius: .25vw;
+    display: inline-block;
+    margin-top: .8vw;
+    transition: all .4s ease-in;
+}
+
+.success-box .back-btn:hover {
+    border-color: #F89509;
+    background: none;
+    color: #F89509;
+}
+
+
+/* End */
+
+
+/* Lock Screen Page */
+.lock-box img {
+    max-width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.3vw;
+}
+
+.lock-box h1 {
+    margin-bottom: 0;
+}
+
+.lock-box p {
+    color: #8A92A6;
+}
+
+form.locks-form {
+    margin-top: 1.5vw;
+}
+
+form.locks-form input {
+    padding: 0.5vw 0.727vw;
+}
+
+form.locks-form .btn-login {
+    font-size: 0.8vw;
+    padding: .4vw 4vw;
+    border: .1vw solid transparent;
+    border-radius: .25vw;
+    background: #F89509;
+    margin-top: 2vw;
+    transition: all .4s ease-in;
+}
+
+form.locks-form .btn-login:hover {
+    color: #F89509;
+    border-color: #F89509;
+    background: none;
+}
+
+
+/* End */
+
+
+/* Reset pass page */
+.reset-box h1 {
+    margin-bottom: .4vw;
+}
+
+.reset-box p {
+    color: #8A92A6;
+}
+
+form.reset-form {
+    margin-top: 1.424vw;
+}
+
+form.reset-form input {
+    padding: 0.5vw 0.727vw;
+}
+
+.reset-form .btn-reset {
+    font-size: .8vw;
+    padding: .35vw 4vw;
+    border-radius: .3vw;
+    border: .1vw solid #F89509 ;
+    background: #F89509;
+    margin-top: 1vw;
+    transition: all .4s ease-in;
+}
+
+.reset-form .btn-reset:hover {
+    color: #F89509;
+    border-color: #F89509;
+    background: none;
+}
+
+.signup-form.signin-form .btn-reset {
+    font-size: .8vw;
+    padding: .35vw 4vw;
+    border-radius: .3vw;
+    border: .1vw solid #F89509 ;
+    background: #F89509;
+    margin: .6vw 0 1.2vw;
+    transition: all .4s ease-in;
+}
+
+.signup-form.signin-form .btn-reset:hover {
+    color: #F89509;
+    border-color: #F89509;
+    background: none;
+}
+
+/* End */
+
+/* user management page */
+
+/* Filter and serach */
+.usm-sec-main {
+    margin-top: 40px;
+    padding: 0 30px;
+}
+
+.usm-wraper {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+
+.usm-wraper .cm-filters {
+    width: 100%;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+    margin-left: 160px;
+}
+
+
+.cm-filters .usm-search-form {
+    position: relative;
+    border: 1px solid #eeeeee6e;
+    border-radius: 20px;
+}
+
+
+.cm-filters .usm-search-form input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 100;
+}
+.cm-filters .usm-search-form input::placeholder {
+    color: #fff;
+}
+.cm-filters .usm-search-form .form-group {
+    display: flex;
+    padding: 0px 20px;
+    width: 380px;
+}
+
+.cm-filters .usm-search-form .form-group button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.cm-filters button {
+    background: none;
+    outline: none;
+    border: 1px solid #eeeeee6e;
+    border-radius: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.prim-btn {
+    background: #F89509;
+    padding: 8px 50px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: all .4s ease-in;
+}
+
+
+.prim-btn:hover {
+    border-color: #F89509;
+    color: #F89509;
+    background: none;
+}
+
+
+
+/* End */
+
+/* User Management Table */
+.ums-table-main {
+    padding-top: 40px;
+}
+.table-dark.ums-table {
+    background: none !important;
+}
+.ums-table thead th {
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    color: #fff;
+}
+
+.ums-table tbody td {
+    vertical-align: middle;
+    padding: 15px 0;
+    border: none;
+}
+.ums-table tbody td p{
+    margin-bottom: 0;
+    color: #fff;
+}
+.ums-table tbody tr:first-child td {
+    padding-top: 30px;
+}
+.ums-table tbody td:first-child {
+    width: 300px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-info .img-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.user-info .img-box img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.rights-btns button {
+    padding: 8px 30px;
+    border-radius: 6px;
+    max-width: 140px;
+    width: 100%;
+    border: none;
+}
+
+.rights-btns {
+    display: flex;
+    gap: 25px;
+}
+
+.rights-btns .btn-approved {
+    background: #37D159;
+    color: #fff;
+}
+
+.rights-btns .btn-reject {
+    background: #FF6746;
+    color: #fff;
+}
+
+.status-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-btns button {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+}
+.status-btns .btn-edit {
+    background: #37D159;
+}
+
+.status-btns .btn-del {
+    background: #FF6746;
+}
+
+/* End */
+
+/* End */
+
+/* Add user Modal */
+.modal-box {
+    max-width: 33vw;
+}
+
+.modal-box .modal-content {
+    padding: 2vw 3.2vw 3vw;
+    background: linear-gradient(180deg, #000000 0%, rgba(32, 32, 34, 0) 114.67%);
+    backdrop-filter: blur(25px);
+    border: 0.061vw solid #ffffff4d;
+    border-radius: 15px;
+    position: relative;
+    filter: drop-shadow(0px 49px 83px rgba(0, 0, 0, 0.5));
+}
+
+.modal-box .modal-body{
+    padding: 0;
+}
+.modal-box .modal-header-text h2 {
+    font-size: 1.5vw;
+    margin: 0;
+    color: #F89509;
+    font-weight: 600;
+}
+.add-userBtn {
+    padding: .35vw 3.2vw;
+    border-radius: .3vw;
+    border: .1vw solid;
+    font-size: .8vw;
+    background: #F89509;
+    margin-top: 1.5vw;
+    transition: all .4s ease-in;
+}
+
+.add-userBtn:hover {
+    color: #F89509;
+    background: no-repeat;
+    border-color: #F89509;
+}
+
+
+form.user-form input {
+    padding: 0.5vw 0.727vw;
+}
+button.btn-close.user {
+    opacity: 1;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+
+
+/* End */
+
+
+/* Responsive  */
+
+
+@media(max-width:1750px){
+    .cm-filters .usm-search-form input {
+        font-size: 14px;
+    }
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 20px;
+    }
+    .cm-filters .usm-search-form .form-group {
+        padding-right: 10px;
+    }
+    .prim-btn {
+        font-size: 14px;
+        padding: 6px 50px;
+    }
+    .ums-table thead th {
+        font-size: 16px;
+    }
+    
+    .user-info .img-box {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 14px;
+    }
+    .rights-btns button {
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    .status-btns button {
+        width: 25px;
+        height: 25px;
+    }
+    
+}
+
+
+@media(max-width:1599px){
+    .cm-filters .usm-search-form input {
+        font-size: 13px;
+        padding: 0;
+        height: 100%;
+    }
+    
+    .cm-filters .usm-search-form {
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .cm-filters .usm-search-form .form-group {
+        height: 100%;
+        padding-right: 15px;
+        width: 330px;
+    }
+    
+    .cm-filters .usm-search-form .form-group button {
+        width: auto;
+        height: 100%;
+    }
+    
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 75%;
+    }
+    .cm-filters button {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+    }
+    
+    .cm-filters button img {
+        max-width: 33%;
+    }
+    
+    .prim-btn {
+        font-size: 13px;
+        padding: 6px 40px;
+    }
+    .usm-wraper .cm-filters {
+        margin-left: 210px;
+    }
+    .usm-wraper .cm-filters {
+        margin-left: 210px;
+    }
+    
+    .ums-table thead th {
+        font-size: 14px;
+    }
+    
+    .user-info .img-box {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 12px;
+    }
+    .ums-table tbody td:first-child {
+        width: 220px;
+    }
+    
+    .rights-btns button {
+        font-size: 12px;
+        padding: 6px 30px;
+        border-radius: 4px;
+        max-width: 120px;
+    }
+    
+    .ums-table tbody tr:first-child td {
+        padding-top: 20px;
+    }
+    .user-info {
+        gap: 20px;
+    }
+    
+    
+}
+
+
+@media(max-width:1440px){
+    .cm-filters .usm-search-form input {
+        font-size: 11px;
+    }
+    
+    .cm-filters .usm-search-form {
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 60%;
+    }
+    
+    .cm-filters .usm-search-form .form-group {
+        width: 290px;
+    }
+    
+    .cm-filters button {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    .cm-filters button img {
+        max-width: 30%;
+    }
+    
+    .usm-wraper .cm-filters {
+        gap: 20px;
+    }
+    
+    .prim-btn {
+        font-size: 11px;
+        padding: 5px 30px;
+        border-radius: 4px;
+    }
+    .ums-table thead th {
+        font-size: 12px;
+    }
+    
+    .user-info .img-box {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 11px;
+    }
+    
+    .ums-table tbody td:first-child {
+        width: 170px;
+    }
+    
+    .rights-btns button {
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 3px;
+        max-width: 150px;
+    }
+    
+    .rights-btns {
+        gap: 15px;
+    }
+    
+    .status-btns button {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .status-btns button img {
+        max-width: 45%;
+    }
+    .ums-table tbody td {
+        padding: 10px 0;
+    }
+    
+}
+
+@media(max-width:1260px){
+    .prim-btn {
+        font-size: 9px;
+        padding: 4px 20px;
+    }
+    
+    .cm-filters .usm-search-form input {
+        font-size: 9px;
+    }
+    
+    .cm-filters .usm-search-form {
+        height: 34px;
+        border-radius: 6px;
+    }
+    
+    .cm-filters .usm-search-form .form-group button img {
+        max-width: 45%;
+    }
+    
+    .cm-filters .usm-search-form .form-group {
+        padding-right: 10px;
+    }
+    
+    .cm-filters button {
+        width: 34px;
+        height: 34px;
+        border-radius: 6px;
+    }
+    
+    .ums-table-main {
+        padding-top: 25px;
+    }
+    .usm-sec-main {
+        padding: 0 24px;
+    }
+    .ums-table thead th {
+        font-size: 10px;
+    }
+    
+    .user-info .img-box {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .ums-table tbody td p {
+        font-size: 9px;
+    }
+    
+    .ums-table tbody td:first-child {
+        width: 130px;
+    }
+    
+    .user-info {
+        gap: 12px;
+    }
+    
+    .rights-btns button {
+        font-size: 9px;
+        padding: 3px 10px;
+        border-radius: 3px;
+    }
+    
+    .rights-btns {
+        gap: 8px;
+    }
+    
+    .status-btns button {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .status-btns {
+        gap: 8px;
+    }
+    
+    .ums-table tbody td {
+        padding: 8px 0;
+    }
+    
+}
+
+@media (max-width: 991px) {
+    /* Sign In Page */
+    .forgottPass a {
+        font-size: 15px;
+    }
+    
+    form.signup-form .agree input {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* sign in page End */
+
+    /* Success Page */
+    .success-box img {
+        max-width: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .success-box .back-btn {
+        font-size: 15px;
+        padding: 6px 20px;
+        border-radius: 4px;
+    }    
+
+    /* End */
+
+    /* Lock Screen Page */
+    .lock-box img {
+        max-width: 75px;
+        height: 75px;
+        margin-bottom: 15px;
+    }
+    form.locks-form input {
+        padding: 8px 18px;
+    }
+    
+    form.locks-form .btn-login {
+        font-size: 14px;
+        padding: 6px 60px;
+        border-radius: 5px;
+    }
+    
+
+    /* End */
+
+    /* Reset pass page */
+    form.reset-form input {
+        padding: 8px 20px;
+    }
+    
+    .reset-form .btn-reset {
+        font-size: 15px;
+        padding: 4px 60px;
+        border-radius: 4px;
+    }
+    
+
+    /* End */
+}
+@media (max-width: 767px) {
+    .forgottPass {
+        padding: 0 10px;
+    }
+    .forgottPass a {
+        font-size: 13px;
+    }    
+
+    /* Success Page */
+    .success-box .back-btn {
+        margin-top: 0px;
+        font-size: 13px;
+        padding: 6px 22px;
+    }    
+
+    /* End */
+
+}
+
+
+
+@media (max-width: 575px) {
+    .forgottPass a {
+        font-size: 12px;
+    }
+    
+    /* Lock Screen Page */
+    .lock-box img {
+        max-width: 65px;
+        height: 65px;
+    }
+    form.locks-form .btn-login {
+        font-size: 13px;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+
+    /* End */
+
+    /* Reset passs page */
+    .reset-form .btn-reset {
+        font-size: 13px;
+        padding: 4px 50px;
+        border-radius: 4px;
+        margin-top: 20px;
+    }    
+    /* End */
+}
+
+
+/* End */

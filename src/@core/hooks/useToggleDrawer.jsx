@@ -11,9 +11,8 @@ const useToggleDrawer = () => {
     toggleView,
     view,
   } = useContext(DrawerContext);
-  console.log("toggle drawer", toggleDrawer);
+
   const handleDrawer = (id) => {
-    console.log(id);
     toggleDrawer(id);
   };
 

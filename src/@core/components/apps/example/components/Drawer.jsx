@@ -43,7 +43,6 @@ const Footer = styled(Box)(({ theme }) => ({
 const ExampleDrawer = (props) => {
   // ** Props
   const { open, toggle, serviceId } = props;
-  console.log(props, "PROPS");
 
   // ** Hooks
   const {
