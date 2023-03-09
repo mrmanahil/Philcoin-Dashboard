@@ -8,9 +8,12 @@ import close from "assets/assets/close.png";
 import TableHeader from "@core/components/apps/invitations/components/TableHeader";
 import Drawer from "@core/components/apps/invitations/components/Modal";
 import useToggleDrawer from "@core/hooks/useToggleDrawer";
+import { useInvitation } from "@core/hooks/apps/useExample";
 
 const Page = () => {
   const { serviceId, isDrawerOpen, handleDrawer } = useToggleDrawer();
+  const { store } = useInvitation();
+  // console.log(store?.entities);
 
   return (
     <>

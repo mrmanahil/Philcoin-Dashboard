@@ -31,22 +31,24 @@ export const fetchAllAction = createAsyncThunk(
   }
 );
 
-export const addAction = createAsyncThunk("invitation/add", async (data) => {
-  Slice.actions.handleStatus("pending");
-  try {
-    const response = await invitationService.add(data)(
-      fetchAllAction({ query: "" })
-    );
-    toast.success("Added succesfully!")(Slice.actions.handleStatus("success"));
-    console.log(response.data, "response.data");
-    return response.data;
-  } catch (error) {
-    toast.error(error.response.data.message || "Something went wrong!")(
-      Slice.actions.handleStatus("error")
-    );
-    return error.response.data;
+export const addAction = createAsyncThunk(
+  "invitation/add",
+  async (data, state) => {
+    Slice.actions.handleStatus("pending");
+    try {
+      const response = await invitationService.add(data);
+      state.dispatch(fetchAllAction({ query: "" }));
+      toast.success("Added succesfully!");
+      Slice.actions.handleStatus("success");
+      return response.data;
+    } catch (error) {
+      toast.error(error.response.data.message || "Something went wrong!")(
+        Slice.actions.handleStatus("error")
+      );
+      return error.response.data;
+    }
   }
-});
+);
 
 export const updateAction = createAsyncThunk(
   "invitation/update",

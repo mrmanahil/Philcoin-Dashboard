@@ -14,6 +14,7 @@ import { DrawerProvider } from "@core/context/DrawerContext";
 import MainNavigation from "@core/MainNavigation";
 import { SidebarProvider } from "@core/context/SidebarContext";
 import { AuthProvider } from "context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <AuthProvider>
           <SidebarProvider>
             <DrawerProvider>
+              <Toaster position="top-right" reverseOrder={false} />
               <MainNavigation />
             </DrawerProvider>
           </SidebarProvider>

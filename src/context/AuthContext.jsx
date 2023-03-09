@@ -101,15 +101,15 @@ const AuthProvider = ({ children }) => {
       const accessToken = window.localStorage.getItem(
         authConfig.storageTokenKeyName
       );
-      console.log(accessToken);
+      // console.log(accessToken);
       // const refreshToken = window.localStorage.getItem(
       //   authConfig.refreshTokenKeyName
       // );
       const user = JSON.parse(window.localStorage.getItem("userData") || "{}");
 
-      console.log("====================================");
-      console.log(user);
-      console.log("====================================");
+      // console.log("====================================");
+      // console.log(user);
+      // console.log("====================================");
       // console.log(accessToken);
       // console.log('====================================');
       // console.log(refreshToken);
@@ -153,9 +153,9 @@ const AuthProvider = ({ children }) => {
     authService
       .login(params)
       .then(async ({ data: response }) => {
-        console.log("==========Login data================");
-        console.log(response);
-        console.log("====================================");
+        // console.log("==========Login data================");
+        // console.log(response);
+        // console.log("====================================");
 
         saveLogin({
           accessToken: response.data.token || "",

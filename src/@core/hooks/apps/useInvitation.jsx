@@ -61,7 +61,7 @@ export const useInvitation = (serviceId) => {
 
   const addInvitation = async (data) => {
     dispatch(addAction({ ...data })).then(({ payload }) => {
-      if (payload?.statusCode === "10000") {
+      if (payload?.data?.invitation) {
         handleDrawer(null);
       } else {
         // console.log('============API_ERROR===============')
