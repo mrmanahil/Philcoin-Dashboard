@@ -64,6 +64,7 @@ const AuthProvider = ({ children }) => {
   const [userTmp, setUserTmp] = useState(defaultProvider.user);
   // const [accessTokenTmp, setAccessTokenTmp] = (useState < string) | (null > "");
   const [accessTokenTmp, setAccessTokenTmp] = useState("");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [loading, setLoading] = useState(defaultProvider.loading);
   // const [status, setStatus] = useState < AuthValuesType["status"] > "idle";
@@ -74,7 +75,6 @@ const AuthProvider = ({ children }) => {
   const [activeStep, setActiveStep] = useState(defaultProvider.activeStep); // signup step form
 
   // ** Hooks
-  const navigate = useNavigate();
 
   useEffect(() => {
     const initAuth = async () => {
@@ -101,21 +101,25 @@ const AuthProvider = ({ children }) => {
       const accessToken = window.localStorage.getItem(
         authConfig.storageTokenKeyName
       );
-      const refreshToken = window.localStorage.getItem(
-        authConfig.refreshTokenKeyName
-      );
+      console.log(accessToken);
+      // const refreshToken = window.localStorage.getItem(
+      //   authConfig.refreshTokenKeyName
+      // );
       const user = JSON.parse(window.localStorage.getItem("userData") || "{}");
 
-      // console.log('====================================');
-      // console.log(user);
-      // console.log('====================================');
+      console.log("====================================");
+      console.log(user);
+      console.log("====================================");
       // console.log(accessToken);
       // console.log('====================================');
       // console.log(refreshToken);
       // console.log('====================================');
 
-      if (accessToken && refreshToken && user) {
-        saveLogin({ accessToken, refreshToken, user });
+      if (accessToken && user) {
+        setIsAuthenticated(true);
+        saveLogin({ accessToken, user });
+      } else {
+        setIsAuthenticated(false);
       }
 
       //   if (storedToken) {
@@ -154,11 +158,10 @@ const AuthProvider = ({ children }) => {
         console.log("====================================");
 
         saveLogin({
-          accessToken: response.data.tokens.accessToken || "",
-          refreshToken: response.data.tokens.refreshToken || "",
+          accessToken: response.data.token || "",
+          // refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
-        navigate("/dashboard");
         setStatus("success");
       })
       .catch((error) => {
@@ -173,7 +176,7 @@ const AuthProvider = ({ children }) => {
     window.localStorage.removeItem("userData");
     window.localStorage.removeItem(authConfig.storageTokenKeyName);
     window.localStorage.removeItem(authConfig.refreshTokenKeyName);
-    navigate("/login");
+    // navigate("/login");
   };
 
   const handleRegister = (params, errorCallback) => {
@@ -186,7 +189,7 @@ const AuthProvider = ({ children }) => {
           refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
-        navigate("/channels");
+        // navigate("/channels");
         setStatus("success");
       })
       .catch((error) => {
@@ -264,10 +267,11 @@ const AuthProvider = ({ children }) => {
     setActiveStep(0);
   };
 
-  const saveLogin = ({ accessToken, refreshToken, user }) => {
+  // const saveLogin = ({ accessToken, refreshToken, user }) => {
+  const saveLogin = ({ accessToken, user }) => {
     // save token in localStorage
     window.localStorage.setItem(authConfig.storageTokenKeyName, accessToken);
-    window.localStorage.setItem(authConfig.refreshTokenKeyName, refreshToken);
+    // window.localStorage.setItem(authConfig.refreshTokenKeyName, refreshToken);
 
     // const returnUrl = router.query.returnUrl;
 
@@ -305,6 +309,7 @@ const AuthProvider = ({ children }) => {
     handleReset,
     status,
     setStatus,
+    isAuthenticated,
   };
 
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;

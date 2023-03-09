@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import p3 from "assets/assets/p3.png";
 import p2 from "assets/assets/p2.png";
 import p1 from "assets/assets/p1.png";
@@ -9,12 +9,19 @@ import graph from "assets/assets/graph.png";
 import { Link } from "react-router-dom";
 import SideBar from "layouts/sidebar";
 import TopBar from "layouts/topbar";
+import { SidebarContext } from "@core/context/SidebarContext";
 
 const Page = () => {
+  const { isDrawerOpen } = useContext(SidebarContext);
+
   return (
     <>
       <main>
-        <section class="main-dashboard-sec">
+        <section
+          class={`main-dashboard-sec ${
+            isDrawerOpen ? "main-dashboard-secbig" : ""
+          }`}
+        >
           {/* <!-- sidebar  --> */}
           <SideBar />
           {/* <!-- sidebar  -->

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "pages/Login";
 import ResetPassword from "pages/reset-password";
@@ -8,6 +8,7 @@ import Success from "pages/success";
 import Dashboard from "pages/dashboard";
 import UserManagement from "pages/user-management";
 import Invitations from "pages/invitations";
+import { AuthContext } from "context/AuthContext";
 
 const Page = () => {
   return (

@@ -14,13 +14,14 @@ import {
   addAction,
   updateAction,
   deleteAction,
-} from "store/apps/example";
+} from "store/apps/invitation";
 
 // ** Import Custom hooks
 import useToggleDrawer from "@core/hooks/useToggleDrawer";
 
 const defaultValues = {
-  first_name: "",
+  name: "",
+  email: "",
 };
 
 export const useInvitation = (serviceId) => {
@@ -33,7 +34,7 @@ export const useInvitation = (serviceId) => {
 
   const { handleDrawer, handleModal } = useToggleDrawer();
 
-  const store = useSelector((state) => state.user);
+  const store = useSelector((state) => state.invitation);
 
   const dispatch = useDispatch();
 
@@ -43,22 +44,22 @@ export const useInvitation = (serviceId) => {
 
   useMemo(() => {
     if (store?.entity && serviceId) {
-      "first_name" in store.entity &&
-        form.setValue("first_name", store.entity.first_name);
+      "name" in store.entity && form.setValue("name", store.entity.name);
+      "email" in store.entity && form.setValue("email", store.entity.email);
     } else {
       form.reset();
     }
   }, [store?.entity, serviceId]);
 
-  const getUser = async (id) => {
+  const getInvitation = async (id) => {
     dispatch(fetchOneAction(id));
   };
 
-  const getUsers = async ({ query }) => {
+  const getInvitations = async ({ query }) => {
     dispatch(fetchAllAction({ query }));
   };
 
-  const addUser = async (data) => {
+  const addInvitation = async (data) => {
     dispatch(addAction({ ...data })).then(({ payload }) => {
       if (payload?.statusCode === "10000") {
         handleDrawer(null);
@@ -70,7 +71,7 @@ export const useInvitation = (serviceId) => {
     });
   };
 
-  const updateUser = async (id, data) => {
+  const updateInvitation = async (id, data) => {
     dispatch(updateAction({ id, data })).then(({ payload }) => {
       if (payload?.statusCode === "10000") {
         handleDrawer(null);
@@ -82,7 +83,7 @@ export const useInvitation = (serviceId) => {
     });
   };
 
-  const deleteUser = async (id) => {
+  const deleteInvitation = async (id) => {
     dispatch(deleteAction(id)).then(({ payload }) => {
       if (payload?.statusCode === "10000") {
         handleModal(null);
@@ -94,16 +95,16 @@ export const useInvitation = (serviceId) => {
     });
   };
 
-  const exportUsers = async () => {};
+  const exportInvitations = async () => {};
 
   return {
     form,
     store,
-    getUser,
-    getUsers,
-    addUser,
-    updateUser,
-    deleteUser,
-    exportUsers,
+    getInvitation,
+    getInvitations,
+    addInvitation,
+    updateInvitation,
+    deleteInvitation,
+    exportInvitations,
   };
 };

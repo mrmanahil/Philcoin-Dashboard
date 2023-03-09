@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Input from "@core/components/form/InputField";
 import { useForm } from "react-hook-form";
 import { useAuth } from "hooks/useAuth";
+import { toast } from "react-hot-toast";
 
 const Page = () => {
   const {
@@ -14,12 +15,20 @@ const Page = () => {
     formState: { errors },
     formState,
     handleSubmit,
+    setError,
   } = useForm();
 
   const auth = useAuth();
 
   const onSubmit = (body) => {
-    console.log(body);
+    const { email, password } = body;
+    auth.login({ email, password }, (error) => {
+      setError("password", {
+        type: "manual",
+        message: error?.message || "Invalid credentials!",
+      });
+      toast.error(error?.message || "Invalid credentials!");
+    });
   };
 
   return (
@@ -46,7 +55,7 @@ const Page = () => {
                       label="email"
                       register={register}
                       formState={formState}
-                      maxLength={25}
+                      maxLength={50}
                       id="email"
                       className="form-control"
                       errors={errors?.email?.type}

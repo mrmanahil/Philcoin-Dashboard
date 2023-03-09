@@ -14,7 +14,7 @@ import closeIcon from "assets/assets/close-icon.svg";
 import { useSelector } from "react-redux";
 
 // ** Third Party Imports
-import { useExample } from "@core/hooks/apps/useExample";
+import { useInvitation } from "@core/hooks/apps/useInvitation";
 
 // ** import form support components
 import { InputField, Select, DateTimePicker } from "@core/components/form";
@@ -24,6 +24,8 @@ import Close from "mdi-material-ui/Close";
 
 // ** Types Imports
 import { Grid, Modal, TextField } from "@mui/material";
+import Input from "@core/components/form/InputField";
+import { useAuth } from "hooks/useAuth";
 
 const InvitationDrawer = (props) => {
   // ** Props
@@ -37,17 +39,24 @@ const InvitationDrawer = (props) => {
       handleSubmit,
       formState: { errors },
       setValue,
+      register,
+      formState,
     },
-    addUser,
-    updateUser,
+    addInvitation,
+    updateInvitation,
     store,
-  } = useExample(serviceId);
+  } = useInvitation(serviceId);
+
+  const {
+    user: { _id },
+  } = useAuth();
 
   const onSubmit = async (data) => {
+    data.userId = _id;
     if (serviceId) {
-      await updateUser(serviceId, data);
+      await updateInvitation(serviceId, data);
     } else {
-      await addUser(data);
+      await addInvitation(data);
     }
   };
 
@@ -91,19 +100,34 @@ const InvitationDrawer = (props) => {
 
             <div class="modal-body">
               <div class="adduser-form">
-                <form action="" class="signup-form user-form">
+                <form
+                  action=""
+                  class="signup-form user-form"
+                  onSubmit={handleSubmit(onSubmit)}
+                >
                   <div class="row">
                     <div class="col-12">
                       <div class="form-group">
                         <label for="name" class="form-label">
                           Name
                         </label>
-                        <input
+                        <Input
+                          type="text"
+                          placeholder="Enter Name"
+                          label="name"
+                          register={register}
+                          formState={formState}
+                          maxLength={50}
+                          id="name"
+                          className="form-control"
+                          errors={errors?.name?.type}
+                        />
+                        {/* <input
                           type="text"
                           class="form-control"
                           id="name"
                           name="name"
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div class="col-12">
@@ -111,17 +135,30 @@ const InvitationDrawer = (props) => {
                         <label for="email" class="form-label">
                           Email
                         </label>
-                        <input
+                        <Input
+                          type="email"
+                          placeholder="Enter Email"
+                          label="email"
+                          register={register}
+                          formState={formState}
+                          maxLength={50}
+                          id="email"
+                          className="form-control"
+                          errors={errors?.email?.type}
+                        />
+                        {/* <input
                           type="email"
                           class="form-control"
                           id="email"
                           name="email"
-                        />
+                        /> */}
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="btn-box text-center">
-                        <button class="add-userBtn">Invite</button>
+                        <button class="add-userBtn" type="submit">
+                          Invite
+                        </button>
                       </div>
                     </div>
                   </div>

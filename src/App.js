@@ -12,14 +12,20 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { DrawerProvider } from "@core/context/DrawerContext";
 import MainNavigation from "@core/MainNavigation";
+import { SidebarProvider } from "@core/context/SidebarContext";
+import { AuthProvider } from "context/AuthContext";
 
 function App() {
   return (
     <>
       <Provider store={store}>
-        <DrawerProvider>
-          <MainNavigation />
-        </DrawerProvider>
+        <AuthProvider>
+          <SidebarProvider>
+            <DrawerProvider>
+              <MainNavigation />
+            </DrawerProvider>
+          </SidebarProvider>
+        </AuthProvider>
       </Provider>
     </>
   );

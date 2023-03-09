@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Home from "../../assets/assets/Home.png";
 import Profile from "../../assets/assets/Profile.png";
 import content from "../../assets/assets/content.png";
@@ -11,20 +11,25 @@ import logout from "../../assets/assets/logout.png";
 import logo from "../../assets/assets/logo.png";
 import logosm from "../../assets/assets/logosm.png";
 import { Link } from "react-router-dom";
+import { SidebarContext } from "@core/context/SidebarContext";
+import { useAuth } from "hooks/useAuth";
 
 const SideBar = () => {
+  const { isDrawerOpen, closeDrawer } = useContext(SidebarContext);
+
+  const { logout: handleLogout } = useAuth();
   return (
     <>
-      <aside class="sidebar">
+      <aside class={`sidebar ${!isDrawerOpen ? `sidebarsm` : ""}`}>
         {/* <!-- logo --> */}
         <div class="brand">
           <div class="logo">
             <img class="logobig" src={logo} alt="" />
             <img class="logosm" src={logosm} alt="" />
           </div>
-          <div class="arrow-side">
+          <div class="arrow-side arrowscale" onClick={() => closeDrawer()}>
             <span>
-              <i class="fas fa-arrow-left"></i>
+              <i class={`fas fa-arrow-${isDrawerOpen ? `right` : `left`}`}></i>
             </span>
           </div>
         </div>
@@ -103,16 +108,14 @@ const SideBar = () => {
                 </a>
               </li>
             </Link>
-            <Link to="/login">
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={logout} alt="" />
-                  </span>{" "}
-                  Logout
-                </a>
-              </li>
-            </Link>
+            <li onClick={() => handleLogout()}>
+              <a href="#">
+                <span>
+                  <img src={logout} alt="" />
+                </span>{" "}
+                Logout
+              </a>
+            </li>
           </ul>
         </div>
         {/* <!-- list  -->

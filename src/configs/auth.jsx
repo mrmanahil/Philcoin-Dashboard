@@ -12,7 +12,7 @@ const config = {
     registerEndpoint: "/jwt/register",
     storageTokenKeyName: "accessToken",
     refreshTokenKeyName: "refreshToken",
-    base_URL: "http://localhost:5000/api/v1",
+    base_URL: "http://172.22.128.1:3000/api/v1",
   },
 };
 
