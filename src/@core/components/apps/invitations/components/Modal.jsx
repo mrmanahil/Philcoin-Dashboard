@@ -47,12 +47,7 @@ const InvitationDrawer = (props) => {
     store,
   } = useInvitation(serviceId);
 
-  const {
-    user: { _id },
-  } = useAuth();
-
   const onSubmit = async (data) => {
-    data.userId = _id;
     if (serviceId) {
       await updateInvitation(serviceId, data);
     } else {
@@ -79,15 +74,15 @@ const InvitationDrawer = (props) => {
         tabindex="-1"
         aria-hidden="true"
       >
-        <div class="modal-dialog  modal-dialog-centered modal-box">
-          <div class="modal-content">
-            <div class="row">
-              <div class="col-12">
-                <div class="modal-header-text">
-                  <h2 class="modal-title">Invite Friends</h2>
+        <div className="modal-dialog  modal-dialog-centered modal-box">
+          <div className="modal-content">
+            <div className="row">
+              <div className="col-12">
+                <div className="modal-header-text">
+                  <h2 className="modal-title">Invite Friends</h2>
                   <button
                     type="button"
-                    class="btn-close user"
+                    className="btn-close user"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                     onClick={handleClose}
@@ -98,17 +93,17 @@ const InvitationDrawer = (props) => {
               </div>
             </div>
 
-            <div class="modal-body">
-              <div class="adduser-form">
+            <div className="modal-body">
+              <div className="adduser-form">
                 <form
                   action=""
-                  class="signup-form user-form"
+                  className="signup-form user-form"
                   onSubmit={handleSubmit(onSubmit)}
                 >
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label for="name" class="form-label">
+                  <div className="row">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label for="name" className="form-label">
                           Name
                         </label>
                         <Input
@@ -130,9 +125,9 @@ const InvitationDrawer = (props) => {
                         /> */}
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="form-group">
-                        <label for="email" class="form-label">
+                    <div className="col-12">
+                      <div className="form-group">
+                        <label for="email" className="form-label">
                           Email
                         </label>
                         <Input
@@ -154,9 +149,9 @@ const InvitationDrawer = (props) => {
                         /> */}
                       </div>
                     </div>
-                    <div class="col-12">
-                      <div class="btn-box text-center">
-                        <button class="add-userBtn" type="submit">
+                    <div className="col-12">
+                      <div className="btn-box text-center">
+                        <button className="add-userBtn" type="submit">
                           Invite
                         </button>
                       </div>

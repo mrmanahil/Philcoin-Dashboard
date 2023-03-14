@@ -22,84 +22,69 @@ const Page = () => {
             isDrawerOpen ? "main-dashboard-secbig" : ""
           }`}
         >
-          {/* <!-- sidebar  --> */}
           <SideBar />
-          {/* <!-- sidebar  -->
-
-     <!-- main section  --> */}
-          <section class="dashboard-main-sec">
+          <section
+            class={`dashboard-main-sec ${
+              !isDrawerOpen ? `main-dashboard-secbig` : ""
+            }`}
+          >
             <TopBar />
-            {/* <div class="top-profile">
-              <div class="bell-notification">
-                <img src={Notification} alt="" />
-                <img src={Message} alt="" />
-              </div>
-              <div class="profile">
-                <div class="userimg">
-                  <img src={user} alt="" />
-                </div>
-                <div class="userinfo">
-                  <h2>Wade Warren</h2>
-                  <h3>Super Admin</h3>
-                </div>
-              </div>
-            </div> */}
-            <div class="inner-main">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="row top-3boxes">
-                    <div class="col-lg-4 col-sm-6">
-                      <div class="philbox">
+            <div className="inner-main">
+              <div className="row">
+                <div className="col-lg-8">
+                  <div className="row top-3boxes">
+                    <div className="col-lg-4 col-sm-6">
+                      <div className="philbox">
                         <img src={p3} alt="" />
                         <h2>PHILChat</h2>
                         <p>Comming Soon</p>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                      <div class="philbox">
+                    <div className="col-lg-4 col-sm-6">
+                      <div className="philbox">
                         <img src={p2} alt="" />
-                        <h2 class="pb-smtext">
+                        <h2 className="pb-smtext">
                           PHIL <span>Education</span>
                         </h2>
                         <p>Comming Soon</p>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                      <div class="philbox">
+                    <div className="col-lg-4 col-sm-6">
+                      <div className="philbox">
                         <img src={p1} alt="" />
                         <h2>Balance</h2>
                       </div>
                     </div>
                   </div>
-                  <div class="row philmd-boxrow">
-                    <div class="col-md-6">
-                      <div class="philmd-box gradient-border">
-                        <div class="pmd-boxcontent">
+                  <div className="row philmd-boxrow">
+                    <div className="col-md-6">
+                      <div className="philmd-box gradient-border">
+                        <div className="pmd-boxcontent">
                           <h2>Main Address Balance</h2>
                         </div>
-                        <div class="pmd-boximg">
+                        <div className="pmd-boximg">
                           <h3>$0</h3>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="philmd-box gradient-border">
-                        <div class="pmd-boxcontent">
+                    <div className="col-md-6">
+                      <div className="philmd-box gradient-border">
+                        <div className="pmd-boxcontent">
                           <h2>Staked Balance</h2>
                           <h3>0.0 PHL / 0.0000 USD</h3>
                         </div>
-                        <div class="pmd-boximg">
+                        <div className="pmd-boximg">
                           <img src={coin1} alt="" />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-">
-                      <div class="biggraph gradient-border">
-                        <div class="charts-top">
+                  <div className="row">
+                    <div className="col-">
+                      <div className="biggraph gradient-border">
+                        <div className="charts-top">
                           <h2>Active Users</h2>
-                          <div class="chart-month">
+                          <div className="chart-month">
                             <span>
                               <img src={bar} alt="" />
                             </span>
@@ -125,47 +110,46 @@ const Page = () => {
                         <div
                           id="chartContainer"
                           style={{ height: "270px", width: "100%" }}
-                          // style="height: 270px; width: 100%;"
                         ></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="transactions gradient-border">
-                    <div class="row">
-                      <div class="col-lg-8">
-                        <div class="all-transactions">
-                          <h2 class="transaction-head">Transactions</h2>
-                          <div class="trans-price">
+                <div className="col-lg-4">
+                  <div className="transactions gradient-border">
+                    <div className="row">
+                      <div className="col-lg-8">
+                        <div className="all-transactions">
+                          <h2 className="transaction-head">Transactions</h2>
+                          <div className="trans-price">
                             <h2>0.0 PHL / 0.0000 USD</h2>
                             <h3>+0%</h3>
                           </div>
-                          <div class="trans-price">
+                          <div className="trans-price">
                             <h2>0.0 PHL / 0.0000 USD</h2>
                             <h3>+0%</h3>
                           </div>
-                          <div class="trans-price">
+                          <div className="trans-price">
                             <h2>0.0 PHL / 0.0000 USD</h2>
                             <h3>+0%</h3>
                           </div>
-                          <div class="trans-price">
+                          <div className="trans-price">
                             <h2>0.0 PHL / 0.0000 USD</h2>
                             <h3>+0%</h3>
                           </div>
-                          <div class="trans-price">
+                          <div className="trans-price">
                             <h2>0.0 PHL / 0.0000 USD</h2>
                             <h3>+0%</h3>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="trans-right">
+                      <div className="col-lg-4">
+                        <div className="trans-right">
                           <img src={p1} alt="" />
                         </div>
                       </div>
                     </div>
-                    <div class="graphi">
+                    <div className="graphi">
                       <img src={graph} alt="" />
                     </div>
                   </div>
@@ -173,7 +157,6 @@ const Page = () => {
               </div>
             </div>
           </section>
-          {/* <!-- main section  --> */}
         </section>
       </main>
     </>

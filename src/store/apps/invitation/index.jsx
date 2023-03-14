@@ -24,9 +24,8 @@ export const fetchOneAction = createAsyncThunk(
 
 export const fetchAllAction = createAsyncThunk(
   "invitation/fetchAll",
-  async (params) => {
-    const { query } = params;
-    const response = await invitationService.getAll({ query });
+  async () => {
+    const response = await invitationService.getAll();
     return response.data;
   }
 );
@@ -114,8 +113,8 @@ export const Slice = createSlice({
     builder.addCase(fetchAllAction.fulfilled, (state, action) => {
       const { data } = action.payload;
 
-      state.entities = data.invitations || [];
-      state.total = data.invitations?.length || 0;
+      state.entities = data.invitation || [];
+      state.total = data.invitation?.length || 0;
       // state.entities = []
       // state.total = 0
     });

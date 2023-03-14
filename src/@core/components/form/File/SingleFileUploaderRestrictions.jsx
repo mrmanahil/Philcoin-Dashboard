@@ -105,8 +105,8 @@ const FileUploaderRestrictions = ({
 
   const FileView = ({ file }) => (
     <ListItem>
-      <div className="file-details">
-        <div className="file-preview">{renderFilePreview(file)}</div>
+      <div classNameName="file-details">
+        <div classNameName="file-preview">{renderFilePreview(file)}</div>
         {file.bytes && (
           <div>
             <Typography className="file-size" variant="body2">

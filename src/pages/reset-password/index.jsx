@@ -5,17 +5,17 @@ const Page = () => {
   return (
     <>
       <main>
-        <section class="signup-page reset-pass">
-          <div class="signup-box reset-box">
+        <section className="signup-page reset-pass">
+          <div className="signup-box reset-box">
             <h1>Reset Password</h1>
             <p>
               Enter your email address and we’ll send you an email with
               instructions to reset your password
             </p>
             <form action="" class="signup-form reset-form">
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group">
+              <div className="row">
+                <div className="col-12">
+                  <div className="form-group">
                     <label for="email" class="form-label">
                       Email
                     </label>
@@ -29,7 +29,7 @@ const Page = () => {
                 </div>
               </div>
               <Link to="/lock-screen">
-                <button class="btn-reset">Reset</button>
+                <button className="btn-reset">Reset</button>
               </Link>
             </form>
           </div>

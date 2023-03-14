@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
 overflow-x: hidden;
 background-color: #202022;
-color: #fff;
+color: #fff !important;
 font-size: unset;
 }
 p {
@@ -545,6 +545,9 @@ form.reset-form input {
     border-radius: 15px;
     position: relative;
     filter: drop-shadow(0px 49px 83px rgba(0, 0, 0, 0.5));
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,50%);
 }
 
 .modal-box .modal-body{
@@ -587,8 +590,215 @@ button.btn-close.user {
 
 /* End */
 
+/* Cntent Management Page 1 */
+.usm-wraper.cms {
+    display: block;
+}
+
+.usm-wraper.cms .cm-filters {
+    max-width: 100%;
+    margin: 0;
+}
+
+.usm-wraper.cms .cm-filters form {
+    width: 100%;
+}
+
+.usm-wraper.cms .cm-filters form .form-group {
+    width: 100% !important;
+}
+
+.cms-box-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    gap: 30px;
+    padding: 60px 0 100px;
+}
+
+.cms-box-main {
+    width: 100%;
+    max-width: calc(25% - 23px);
+}
+
+.cms-box-main .cms-img {
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+}
+
+.cms-box-main .cms-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.cms-box-main .cms-content {
+    padding: 15px 15px 10px 25px;
+    background: linear-gradient(135.45deg, #363636 11.55%, #000000 101.52%);
+    border: 2px solid #80808096;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.cms-content .cms-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cms-content .cms-title h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cms-content .cms-title h3 span {
+    display: block;
+}
+
+.cms-dropdown > button {
+    padding: 0;
+    color: #fff !important;
+    font-size: 18px;
+    box-shadow: none !important;
+}
+
+.cms-dropdown > button:after {
+    display: none;
+}
+
+.cms-dropdown {
+    margin-left: auto;
+}
+
+.cms-content .csm-author {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 4px;
+}
+
+.cms-content .csm-author span {
+    color: #00A3FF;
+    margin-left: 4px;
+}
+
+.cms-content .cms-views {
+    font-size: 14px;
+    font-weight: 400;
+    color: #787878;
+    margin: 0;
+}
+
+.cms-dropdown ul li a {
+    font-size: 14px;
+}
+.cms-dropdown ul li a.dropdown-item:active {
+    background: #f89509;
+}
+
+.cms-dropdown ul li a span {
+    margin-right: 4px;
+}
+
+.cms-dropdown ul {
+    transform: translate(-115px, -20px) !important;
+    inset: unset !important;
+    min-width: 8.5rem;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Cntent Management Page 1 End */
+
+
+/* Cntent Management Page 2  */
+.cms-box-wraper-videos {
+    display: flex;
+    align-items: center;
+    gap: 50px 40px;
+    flex-wrap: wrap;
+    padding: 90px 0 100px;
+}
+
+.cms-video-main {
+    width: 100%;
+    max-width: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.cms-video-main .video-box {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.cms-video-main .video-box video {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.video-content .video-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.video-content .video-desc {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 270px;
+    margin-bottom: 30px;
+}
+
+.video-action-btns button {
+    width: 100%;
+    max-width: 100px;
+    padding: 7px 0;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.video-action-btns {
+    display: flex;
+    gap: 18px;
+}
+
+.video-action-btns .approve-btn {
+    background: #37D159;
+}
+
+.video-action-btns .reject-btn {
+    background: #FF6746;
+}
+
+/* Cntent Management Page 2 End */
+
+/* End */
+
 
 /* dashboard page  */
+
+section.dashboard-main-sec.main-dashboard-secbig {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+}
+
 section.main-dashboard-sec {
     position: relative;
     

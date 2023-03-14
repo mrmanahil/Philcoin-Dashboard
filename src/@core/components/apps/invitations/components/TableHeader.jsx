@@ -14,23 +14,23 @@ const TableHeader = (props) => {
   const { handleFilter, value, toggle } = props;
 
   return (
-    <div class="usm-wraper">
-      <div class="cm-filters">
+    <div className="usm-wraper">
+      <div className="cm-filters">
         <form action="" class="usm-search-form">
-          <div class="form-group">
+          <div className="form-group">
             <input type="text" class="form-control" placeholder="Search here" />
             <button>
               <img src={searchIcon} alt="" />
             </button>
           </div>
         </form>
-        <div class="usm-filter-box">
+        <div className="usm-filter-box">
           <button>
             <img src={filterIcon} alt="" />
           </button>
         </div>
       </div>
-      <div class="add-user-btn">
+      <div className="add-user-btn">
         <button
           class="add-btn prim-btn"
           data-bs-toggle="modal"

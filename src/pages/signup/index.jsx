@@ -3,27 +3,35 @@ import Gmail from "../../assets/assets/Gmail.png";
 import Facebook from "../../assets/assets/Facebook.png";
 import Instagram from "../../assets/assets/Instagram.png";
 import Linkedin from "../../assets/assets/Linkedin.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Input from "@core/components/form/InputField";
 import { useForm } from "react-hook-form";
+import { useAuth } from "hooks/useAuth";
 
 const Page = () => {
+  const location = useLocation();
+  const query = location?.search?.slice("5");
+  const navigate = useNavigate();
+
   const {
     register,
     formState: { errors },
     formState,
     handleSubmit,
+    setError,
   } = useForm();
 
+  const auth = useAuth();
+
   const onSubmit = (body) => {
-    console.log(body);
+    auth.createAccount(body, query, navigate);
   };
 
   return (
     <>
       <main>
-        <section class="signup-page">
-          <div class="signup-box">
+        <section className="signup-page">
+          <div className="signup-box">
             <h1>Sign Up</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <form
@@ -31,9 +39,9 @@ const Page = () => {
               class="signup-form"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
+              <div className="row">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="fname" class="form-label">
                       First Name
                     </label>
@@ -48,16 +56,10 @@ const Page = () => {
                       className="form-control"
                       errors={errors?.firstName?.type}
                     />
-                    {/* <input
-                      type="text"
-                      class="form-control"
-                      id="fname"
-                      name="fname"
-                    /> */}
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="lname" class="form-label">
                       Last Name
                     </label>
@@ -72,16 +74,10 @@ const Page = () => {
                       className="form-control"
                       errors={errors?.lastName?.type}
                     />
-                    {/* <input
-                      type="text"
-                      class="form-control"
-                      id="lname"
-                      name="lname"
-                    /> */}
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="email" class="form-label">
                       Email
                     </label>
@@ -91,21 +87,15 @@ const Page = () => {
                       label="email"
                       register={register}
                       formState={formState}
-                      maxLength={25}
+                      maxLength={35}
                       id="email"
                       className="form-control"
                       errors={errors?.email?.type}
                     />
-                    {/* <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                    /> */}
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="phone" class="form-label">
                       Phone No.
                     </label>
@@ -120,16 +110,10 @@ const Page = () => {
                       className="form-control"
                       errors={errors?.phone?.type}
                     />
-                    {/* <input
-                      type="number"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                    /> */}
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="Password" class="form-label">
                       Password
                     </label>
@@ -144,16 +128,10 @@ const Page = () => {
                       className="form-control"
                       errors={errors?.password?.type}
                     />
-                    {/* <input
-                      type="password"
-                      class="form-control"
-                      id="Password"
-                      name="Password"
-                    /> */}
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
+                <div className="col-sm-6">
+                  <div className="form-group">
                     <label for="cpassword" class="form-label">
                       Confirm password
                     </label>
@@ -168,26 +146,10 @@ const Page = () => {
                       className="form-control"
                       errors={errors?.confirm_password?.type}
                     />
-                    {/* <input
-                      type="password"
-                      class="form-control"
-                      id="cpassword"
-                      name="cpassword"
-                    /> */}
                   </div>
                 </div>
               </div>
-              <div class="agree">
-                {/* <Input
-                  type="checkbox"
-                  label="agree"
-                  register={register}
-                  formState={formState}
-                  maxLength={25}
-                  id="checkbox"
-                  className="form-control"
-                  // errors={errors?.agree?.type}
-                /> */}
+              <div className="agree">
                 <input type="checkbox" id="checkbox" {...register("agree")} />
                 <label for="checkbox">I agree with the terms of use</label>
               </div>
@@ -195,9 +157,9 @@ const Page = () => {
                 Submit
               </button>
             </form>
-            <div class="signup-bottom">
+            <div className="signup-bottom">
               <p class="sb-textone">or sign up with other accounts?</p>
-              <div class="loginsocial">
+              <div className="loginsocial">
                 <a href="#">
                   <img src={Gmail} alt="" />
                 </a>

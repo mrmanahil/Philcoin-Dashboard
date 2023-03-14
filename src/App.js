@@ -6,8 +6,8 @@ import "./assets/css/dataTables.bootstrap4.min.css";
 import "./assets/css/responsive.css";
 import "./assets/css/slick-theme.css";
 import "./assets/css/slick.css";
+import "./assets/css/style-coming-soon.css";
 import "./App.css";
-
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { DrawerProvider } from "@core/context/DrawerContext";

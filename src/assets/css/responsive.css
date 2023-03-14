@@ -134,6 +134,40 @@
         width: 25px;
         height: 25px;
     }
+
+    /* user management page 1 */
+    .cms-box-main .cms-img {
+        height: 220px;
+    }
+    
+    .cms-content .cms-title h3 {
+        font-size: 16px;
+    }
+    
+    /* user management page 1 End*/
+
+    /* user management page 2*/
+    .cms-video-main .video-box {
+        max-width: 270px;
+        height: 160px;
+    }
+    
+    .video-content .video-title {
+        font-size: 18px;
+    }
+    
+    .video-content .video-desc {
+        font-size: 11px;
+    }
+    
+    .video-action-btns button {
+        max-width: 90px;
+        padding: 6px 0;
+        font-size: 11px;
+    }
+    
+    /* user management page 2 End*/
+
     /* ayub css  */
       
 }
@@ -391,6 +425,66 @@
     .user-info {
         gap: 20px;
     }
+
+    /* user management page 1 */
+    .cms-box-wraper {
+        padding: 50px 0 90px;
+    }
+    
+    .cms-box-main .cms-img {
+        height: 190px;
+    }
+    
+    .cms-content .cms-title h3 {
+        font-size: 14px;
+    }
+    
+    .cms-dropdown > button {
+        font-size: 16px;
+    }
+    
+    .cms-content .csm-author {
+        font-size: 13px;
+    }
+    
+    .cms-content .cms-views {
+        font-size: 13px;
+    }
+    
+    .cms-dropdown ul li a {
+        font-size: 12px;
+    }
+    
+    
+    /* user management page 1 End */
+
+    /* user management page 2  */
+    .cms-box-wraper-videos {
+        row-gap: 40px;
+        padding: 70px 0 70px;
+    }
+    .video-content .video-title {
+        font-size: 16px;
+    }
+    
+    .video-content .video-desc {
+        font-size: 10px;
+        margin-bottom: 20px;
+        max-width: 240px;
+    }
+    
+    .video-action-btns button {
+        max-width: 80px;
+        font-size: 10px;
+    }
+    
+    .cms-video-main .video-box {
+        max-width: 250px;
+        height: 146px;
+    }
+        
+    /* user management page 2 End */
+
     /* ayub css  */
     
     
@@ -657,6 +751,83 @@
         border-radius: 3px;
         max-width: 90px;
     }
+
+    /* user management page 1 */
+    .cms-box-wraper {
+        padding: 40px 0 80px;
+        gap: 25px;
+    }
+    
+    .cms-box-main .cms-img {
+        height: 160px;
+    }
+    
+    .cms-box-main {
+        max-width: calc(25% - 19px);
+    }
+    
+    .cms-content .cms-title h3 {
+        font-size: 11px;
+    }
+    
+    .cms-dropdown > button {
+        font-size: 12px;
+    }
+    
+    .cms-content .csm-author {
+        font-size: 10px;
+        margin: 10px 0 0px;
+    }
+    
+    .cms-content .cms-views {
+        font-size: 10px;
+    }
+    
+    .cms-box-main .cms-content {
+        padding: 12px 12px 8px 18px;
+    }
+    .cms-dropdown ul li a {
+        font-size: 10px;
+    }
+    /* user management page 1 End */
+
+    /* user management page 2 */
+    .cms-box-wraper-videos {
+        row-gap: 30px;
+        padding: 60px 0 60px;
+    }
+    .cms-video-main .video-box {
+        max-width: 200px;
+        height: 130px;
+    }
+    
+    .cms-video-main {
+        gap: 30px;
+    }
+    
+    .video-content .video-title {
+        font-size: 14px;
+    }
+    
+    .video-content .video-desc {
+        font-size: 8px;
+        max-width: 180px;
+    }
+    
+    .video-action-btns button {
+        max-width: 70px;
+        font-size: 9px;
+        padding: 5px 0;
+    }
+    
+    .video-action-btns {
+        gap: 12px;
+    }
+    
+    
+    
+    /* user management page 2 End */
+
     /* ayub css  */
     
 }
@@ -933,6 +1104,76 @@
 .ums-table tbody td {
     padding: 8px 0;
 }
+
+/* user management page 1 */
+.cms-box-wraper {
+    padding: 30px 0 60px;
+}
+
+.cms-box-main .cms-img {
+    height: 130px;
+}
+
+.cms-content .cms-title h3 {
+    font-size: 9px;
+}
+
+.cms-dropdown > button {
+    font-size: 10px;
+}
+
+.cms-content .csm-author {
+    font-size: 8px;
+}
+
+.cms-content .cms-views {
+    font-size: 8px;
+}
+
+.cms-dropdown ul li a {
+    font-size: 8px;
+}
+
+.cms-dropdown ul {
+    min-width: 6rem;
+    transform: translate(-80px, -15px) !important;
+    padding: 6px 0;
+}
+
+/* user management page 1 End*/
+
+/* user management page 2 */
+.cms-box-wraper-videos {
+    padding: 45px 0 50px;
+}
+
+.video-content .video-title {
+    font-size: 12px;
+}
+
+.video-content .video-desc {
+    margin-bottom: 15px;
+}
+
+.cms-video-main {
+    gap: 20px;
+}
+
+.cms-video-main .video-box {
+    max-width: 180px;
+    height: 110px;
+    border-radius: 18px;
+}
+
+.video-action-btns button {
+    max-width: 65px;
+    font-size: 8px;
+    padding: 4px 0;
+    border-radius: 2px;
+}
+
+/* user management page 2 End*/
+
 /* ayub css  */
     
 }
@@ -1267,6 +1508,34 @@
             padding: 6px 40px;
             border-radius: 4px;
         }
+
+        /* user management page 1 */
+        .cms-box-wraper {
+            gap: 20px;
+        }
+        
+        .cms-box-main {
+            max-width: calc(33.33% - 14px);
+        }
+        
+        .cms-content .cms-title h3 {
+            font-size: 11px;
+        }
+        
+        .cms-content .csm-author {
+            font-size: 11px;
+        }
+        
+        .cms-content .cms-views {
+            font-size: 10px;
+        }
+        
+        .cms-dropdown ul li a {
+            font-size: 10px;
+        }
+        
+        /* user management page 1 end */
+
     /* ayub css  */
     
 }
@@ -1365,6 +1634,13 @@
         .cm-filters .usm-search-form .form-group {
             width: 353px;
         }
+
+        /* user management page 1 */
+        .cms-box-main {
+            max-width: calc(50% - 10px);
+        }        
+        /* user management page 1 end */
+
     /* ayub css  */
     
 }
@@ -1581,5 +1857,17 @@
     .cm-filters .usm-search-form .form-group {
         width: 150px;
     }
+
+    /* user management page 1 */
+    .cms-box-main {
+        max-width: 100%;
+    }
+    
+    .cms-box-main .cms-content {
+        padding: 10px 8px 6px 12px;
+    }
+    
+    /* user management page 1 end */
+
      /* ayub css  */
 }

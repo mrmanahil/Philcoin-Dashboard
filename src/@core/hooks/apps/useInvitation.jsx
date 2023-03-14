@@ -55,14 +55,15 @@ export const useInvitation = (serviceId) => {
     dispatch(fetchOneAction(id));
   };
 
-  const getInvitations = async ({ query }) => {
-    dispatch(fetchAllAction({ query }));
+  const getAllInvitations = async () => {
+    dispatch(fetchAllAction());
   };
 
   const addInvitation = async (data) => {
     dispatch(addAction({ ...data })).then(({ payload }) => {
       if (payload?.data?.invitation) {
         handleDrawer(null);
+        form.reset();
       } else {
         // console.log('============API_ERROR===============')
         // console.log(payload)
@@ -101,7 +102,7 @@ export const useInvitation = (serviceId) => {
     form,
     store,
     getInvitation,
-    getInvitations,
+    getAllInvitations,
     addInvitation,
     updateInvitation,
     deleteInvitation,

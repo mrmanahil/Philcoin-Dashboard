@@ -2,8 +2,8 @@
 import requests from "./httpService";
 
 const Services = {
-  getAll({ query }) {
-    return requests.get(`invoice/admin`);
+  getAll() {
+    return requests.get(`invite`);
   },
   getAllById(query) {
     return requests.get(`reviews/playlist/${query}`);
@@ -12,7 +12,7 @@ const Services = {
     return requests.get(`reviews/${id}`);
   },
   add(body) {
-    return requests.post("addinvitation", body);
+    return requests.post("invite", body);
   },
   update(id, body) {
     return requests.put(`reviews/${id}`, body);

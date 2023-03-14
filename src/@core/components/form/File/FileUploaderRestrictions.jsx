@@ -117,8 +117,8 @@ const FileUploaderRestrictions = ({
 
   const fileList = files.map((file) => (
     <ListItem key={file.name}>
-      <div className="file-details">
-        <div className="file-preview">{renderFilePreview(file)}</div>
+      <div classNameName="file-details">
+        <div classNameName="file-preview">{renderFilePreview(file)}</div>
         <div>
           <Typography className="file-name">{file.name}</Typography>
           <Typography className="file-size" variant="body2">
@@ -214,7 +214,7 @@ const FileUploaderRestrictions = ({
       {files.length ? (
         <Fragment>
           <List>{fileList}</List>
-          <div className="buttons">
+          <div classNameName="buttons">
             <Button
               color="error"
               variant="outlined"

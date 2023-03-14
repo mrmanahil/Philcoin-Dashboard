@@ -6,15 +6,15 @@ const Page = () => {
   return (
     <>
       <main>
-        <section class="signup-page lock">
-          <div class="signup-box lock-box">
+        <section className="signup-page lock">
+          <div className="signup-box lock-box">
             <img src={avatar1} alt="" />
             <h1>Hi ! Austin Robertson</h1>
             <p>Enter your password to acess the admin.</p>
             <form action="" class="signup-form locks-form">
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group">
+              <div className="row">
+                <div className="col-12">
+                  <div className="form-group">
                     <label for="Password" class="form-label">
                       Password
                     </label>
@@ -28,7 +28,7 @@ const Page = () => {
                 </div>
               </div>
               <Link to="/success">
-                <button class="btn-login">Login</button>
+                <button className="btn-login">Login</button>
               </Link>
             </form>
           </div>

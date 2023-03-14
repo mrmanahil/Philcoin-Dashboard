@@ -3,7 +3,7 @@ import Gmail from "assets/assets/Gmail.png";
 import Facebook from "assets/assets/Facebook.png";
 import Instagram from "assets/assets/Instagram.png";
 import Linkedin from "assets/assets/Linkedin.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "@core/components/form/InputField";
 import { useForm } from "react-hook-form";
 import { useAuth } from "hooks/useAuth";
@@ -20,22 +20,28 @@ const Page = () => {
 
   const auth = useAuth();
 
+  const navigate = useNavigate();
+
   const onSubmit = (body) => {
     const { email, password } = body;
-    auth.login({ email, password }, (error) => {
-      setError("password", {
-        type: "manual",
-        message: error?.message || "Invalid credentials!",
-      });
-      toast.error(error?.message || "Invalid credentials!");
-    });
+    auth.login(
+      { email, password },
+      (error) => {
+        setError("password", {
+          type: "manual",
+          message: error?.message || "Invalid credentials!",
+        });
+        toast.error(error?.message || "Invalid credentials!");
+      },
+      navigate
+    );
   };
 
   return (
     <>
       <main>
-        <section class="signup-page signin">
-          <div class="signup-box signin-box">
+        <section className="signup-page signin">
+          <div className="signup-box signin-box">
             <h1>Sign In</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <form
@@ -43,9 +49,9 @@ const Page = () => {
               class="signup-form signin-form"
               onSubmit={handleSubmit(onSubmit)}
             >
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group">
+              <div className="row">
+                <div className="col-12">
+                  <div className="form-group">
                     <label for="email" class="form-label">
                       Email
                     </label>
@@ -62,8 +68,8 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="form-group">
+                <div className="col-12">
+                  <div className="form-group">
                     <label for="Password" class="form-label">
                       Password
                     </label>
@@ -81,8 +87,8 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              <div class="forgottPass">
-                <div class="agree">
+              <div className="forgottPass">
+                <div className="agree">
                   <input type="checkbox" id="checkbox" />
                   <label for="checkbox">Remember me?</label>
                 </div>
@@ -94,11 +100,10 @@ const Page = () => {
                 Submit
               </button>
             </form>
-            <div class="signup-bottom">
+            <div className="signup-bottom">
               <p class="sb-textone">or sign in with other accounts?</p>
-              <div class="loginsocial">
+              <div className="loginsocial">
                 <a href="#">
-                  {/* <img src="./assets/Gmail.png" alt="" /> */}
                   <img src={Gmail} alt="" />
                 </a>
                 <a href="#">
@@ -114,7 +119,7 @@ const Page = () => {
               <p class="sb-texttwo">
                 Don’t have an account?{" "}
                 <Link to={"/sign-up"}>
-                  <a href="signup.html">Click here to sign up.</a>
+                  <a href="">Click here to sign up.</a>
                 </Link>
               </p>
             </div>

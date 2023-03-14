@@ -6,8 +6,8 @@ const Page = () => {
   return (
     <>
       <main>
-        <section class="signup-page success-page">
-          <div class="signup-box success-box">
+        <section className="signup-page success-page">
+          <div className="signup-box success-box">
             <img src={checkIcon} alt="" />
             <h1>Success !</h1>
             <p>

@@ -134,7 +134,7 @@ form.reset-form input {
     background: none;
 }
 
-.signup-form.signin-form .btn-reset {
+.signup-form .btn-reset {
     font-size: .8vw;
     padding: .35vw 4vw;
     border-radius: .3vw;
@@ -144,7 +144,7 @@ form.reset-form input {
     transition: all .4s ease-in;
 }
 
-.signup-form.signin-form .btn-reset:hover {
+.signup-form .btn-reset:hover {
     color: #F89509;
     border-color: #F89509;
     background: none;

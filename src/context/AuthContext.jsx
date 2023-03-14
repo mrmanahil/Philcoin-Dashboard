@@ -14,6 +14,7 @@ import { authService } from "services";
 
 // ** Third Party Imports
 import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
 
 const steps = [
   {
@@ -148,20 +149,17 @@ const AuthProvider = ({ children }) => {
     initAuth();
   }, []);
 
-  const handleLogin = (params, errorCallback) => {
+  const handleLogin = (params, errorCallback, navigate) => {
     setStatus("pending");
     authService
       .login(params)
       .then(async ({ data: response }) => {
-        // console.log("==========Login data================");
-        // console.log(response);
-        // console.log("====================================");
-
+        window.localStorage.setItem("roles", response.data.user.role);
         saveLogin({
           accessToken: response.data.token || "",
-          // refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
+        navigate("/dashboard");
         setStatus("success");
       })
       .catch((error) => {
@@ -170,26 +168,29 @@ const AuthProvider = ({ children }) => {
       });
   };
 
-  const handleLogout = () => {
+  const handleLogout = (navigate) => {
     setUser(null);
     setIsInitialized(false);
+    setIsAuthenticated(false);
+    localStorage.clear();
+    navigate("/login");
     window.localStorage.removeItem("userData");
     window.localStorage.removeItem(authConfig.storageTokenKeyName);
     window.localStorage.removeItem(authConfig.refreshTokenKeyName);
-    // navigate("/login");
   };
 
-  const handleRegister = (params, errorCallback) => {
+  const handleRegister = (params, errorCallback, navigate) => {
     setStatus("pending");
     authService
       .signup(params)
       .then(async ({ data: response }) => {
+        console.log(response, "API response");
         saveLogin({
           accessToken: response.data.tokens.accessToken || "",
-          refreshToken: response.data.tokens.refreshToken || "",
+          // refreshToken: response.data.tokens.refreshToken || "",
           user: response.data.user,
         });
-        // navigate("/channels");
+        navigate("/login");
         setStatus("success");
       })
       .catch((error) => {
@@ -198,24 +199,20 @@ const AuthProvider = ({ children }) => {
       });
   };
 
-  const handleCreateAccount = async (body, errorCallback) => {
+  const handleCreateAccount = async (body, query, navigate, errorCallback) => {
     setStatus("pending");
     delete body.confirm_password;
-    delete body.API_ERROR;
+    delete body.agree;
     try {
-      const { data } = await authService.signup(body);
-
-      setUserTmp(data.data.user);
-      setAccessTokenTmp(data.data.tokens.accessToken);
-
-      window.localStorage.setItem(
-        authConfig.storageTokenKeyName,
-        data.data.tokens.accessToken
-      );
-
-      // navigate("/channels");
+      const { data } = await authService.signup(body, query);
+      setUserTmp(data?.data?.user);
+      setAccessTokenTmp(data?.data?.token);
+      window.localStorage.setItem("accessToken", data?.data?.token);
+      window.localStorage.setItem("roles", data?.data?.user?.role);
       setStatus("success");
-      handleNext();
+      toast.success(data?.message || "Success");
+      setIsAuthenticated(true);
+      navigate("/dashboard");
     } catch (error) {
       setStatus("error");
       toast.error(error?.response?.data?.message || "Something went wrong!");
