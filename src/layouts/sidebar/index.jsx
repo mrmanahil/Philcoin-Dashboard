@@ -29,10 +29,49 @@ const SideBar = () => {
     logout(navigate);
   };
 
+  const sidebarData = [
+    {
+      link: "/dashboard",
+      title: "Dashboard",
+      role: ["admin", "user"],
+    },
+    {
+      link: "/wallet-management",
+      title: "User Management",
+      role: ["admin"],
+    },
+    {
+      link: "/wallet-management",
+      title: "Content Management",
+      role: ["admin"],
+    },
+    {
+      link: "/wallet-management",
+      title: "Wallet Management",
+      role: ["admin"],
+    },
+    {
+      link: "/wallet-management",
+      title: "NFT Marketplace Management",
+      role: ["admin"],
+    },
+    {
+      link: "/wallet-management",
+      title: "Reporting",
+      role: ["admin"],
+    },
+    {
+      link: "/invitations",
+      title: "Invitations",
+      role: ["admin", "user"],
+    },
+  ];
+
+  const { user } = useAuth();
+
   return (
     <>
       <aside class={`sidebar ${!isDrawerOpen ? `sidebarsm` : ""}`}>
-        {/* <!-- logo --> */}
         <div className="brand">
           <div className="logo">
             <img class="logobig" src={logo} alt="" />
@@ -44,92 +83,25 @@ const SideBar = () => {
             </span>
           </div>
         </div>
-        {/* <!-- logo -->
-        <!-- list  --> */}
         <div className="navigation">
           <ul>
-            <Link to="/dashboard" style={styles}>
-              <li class="active">
-                <a href="">
-                  <span>
-                    <img src={Home} alt="" />
-                  </span>{" "}
-                  Dashboard
-                </a>
-              </li>
-            </Link>
-            <Link to="/user-management" style={styles}>
-              <li>
-                <a href="user-management.html">
-                  <span>
-                    <img src={Profile} alt="" />
-                  </span>{" "}
-                  User Management
-                </a>
-              </li>
-            </Link>
-            <Link to="/content-management" style={styles}>
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={content} alt="" />
-                  </span>{" "}
-                  Content Management
-                </a>
-              </li>
-            </Link>
-            <Link to="/wallet-management" style={styles}>
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={wallet} alt="" />
-                  </span>{" "}
-                  Wallet Management
-                </a>
-              </li>
-            </Link>
-            <Link to="" style={styles}>
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={nft} alt="" />
-                  </span>{" "}
-                  NFT Marketplace
-                  <br /> Management
-                </a>
-              </li>
-            </Link>
-            <Link to="" style={styles}>
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={rep} alt="" />
-                  </span>{" "}
-                  Reporting
-                </a>
-              </li>
-            </Link>
-            <Link to="" style={styles}>
-              <li>
-                <a href="#">
-                  <span>
-                    <img src={setting} alt="" />
-                  </span>{" "}
-                  Settings
-                </a>
-              </li>
-            </Link>
-            <Link to="/invitations" style={styles}>
-              <li>
-                <a href="invitations.html">
-                  <span>
-                    <img src={inv} alt="" />
-                  </span>{" "}
-                  Invitations
-                </a>
-              </li>
-            </Link>
-            <li onClick={() => handleLogout()}>
+            {sidebarData
+              ?.filter((i, e) => i?.role?.includes(user?.role))
+              .map((item, index) => {
+                return (
+                  <Link to={item?.link} style={styles} key={index}>
+                    <li class="active">
+                      <a href="">
+                        <span>
+                          <img src={Home} alt="" />
+                        </span>
+                        {item?.title}
+                      </a>
+                    </li>
+                  </Link>
+                );
+              })}
+            <li onClick={() => handleLogout()} style={{ cursor: "pointer" }}>
               <a>
                 <span>
                   <img src={logoutImg} alt="" />
@@ -139,13 +111,9 @@ const SideBar = () => {
             </li>
           </ul>
         </div>
-        {/* <!-- list  -->
-
-        <!-- terms  --> */}
         <div className="terms">
           <p>Privacy Policy &nbsp;&nbsp;&nbsp; Terms of Use</p>
         </div>
-        {/* <!-- terms  --> */}
       </aside>
     </>
   );

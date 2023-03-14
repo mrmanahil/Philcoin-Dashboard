@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoute = ({ allowedRoles, children }) => {
-  const roles = Array(localStorage.getItem("roles"));
+  const roles = localStorage.getItem("roles");
   const user = localStorage.getItem("userData");
   if (user === null || user === undefined || user === "") {
     return <Navigate to={"/login"} replace={true} />;
