@@ -2,9 +2,7 @@ import PrivateRoute from "PrivateRoute";
 import React from "react";
 import { lazy } from "react";
 import { createBrowserRouter, Router } from "react-router-dom";
-import { useAuth } from "hooks/useAuth";
 import AuthGuard from "PrivateRoute/AuthGuard";
-import GuestGuard from "PrivateRoute/GuestGuard";
 const Login = lazy(() => import("pages/Login"));
 const ResetPassword = lazy(() => import("pages/reset-password"));
 const Signup = lazy(() => import("pages/signup"));
@@ -20,9 +18,7 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: (
       <PrivateRoute allowedRoles={["admin", "user"]}>
-        {/* <GuestGuard> */}
         <Dashboard />
-        {/* </GuestGuard> */}
       </PrivateRoute>
     ),
   },
@@ -30,9 +26,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: (
       <PrivateRoute allowedRoles={["admin", "user"]}>
-        {/* <GuestGuard> */}
         <Dashboard />
-        {/* </GuestGuard> */}
       </PrivateRoute>
     ),
   },
@@ -54,27 +48,17 @@ export const router = createBrowserRouter([
   },
   {
     path: "/reset-password",
-    element: (
-      // <GuestGuard>
-      <ResetPassword />
-      // </GuestGuard>
-    ),
+    element: <ResetPassword />,
   },
   {
     path: "/success",
-    element: (
-      // <GuestGuard>
-      <Success />
-      // </GuestGuard>
-    ),
+    element: <Success />,
   },
   {
     path: "/user-management",
     element: (
       <PrivateRoute allowedRoles={["admin"]}>
-        {/* <GuestGuard> */}
         <UserManagement />
-        {/* </GuestGuard> */}
       </PrivateRoute>
     ),
   },
@@ -82,9 +66,7 @@ export const router = createBrowserRouter([
     path: "/content-management",
     element: (
       <PrivateRoute allowedRoles={["user"]}>
-        {/* <GuestGuard> */}
         <ContentManagement />
-        {/* </GuestGuard> */}
       </PrivateRoute>
     ),
   },
